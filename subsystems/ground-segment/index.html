@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ground-segment-gs-subsystem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -421,6 +426,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ground Station
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -438,6 +463,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-processing-and-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Processing and Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wireless-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Wireless Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hardware-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hardware Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -468,6 +584,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-processing-and-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Processing and Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-wireless-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Wireless Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hardware-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hardware Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -484,9 +682,83 @@
 
 
 
-  <h1>Ground Station</h1>
-
-
+<h1 id="ground-segment-gs-subsystem">Ground Segment (GS) Subsystem</h1>
+<p>The <strong>Ground Segment (GS)</strong> is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.</p>
+<h2 id="system-overview">System Overview</h2>
+<p>The Ground Segment is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.</p>
+<h3 id="1-processing-and-control">1. Processing and Control</h3>
+<ul>
+<li><strong>Microcontroller:</strong> It is powered by the <strong>STM32F103RC</strong> MCU, which handles the complex tasks of modulating/demodulating radio signals and managing the serial interface with the user's computer.</li>
+<li><strong>Computer Interface:</strong> A <strong>USB-C</strong> connection provides both power to the module and a high-speed data link (via ST-Link) for the operator to send commands and view real-time satellite data.</li>
+</ul>
+<h3 id="2-wireless-communication">2. Wireless Communication</h3>
+<ul>
+<li><strong>Radio Module:</strong> Equipped with an <strong>RFM98PW</strong> radio module, the Ground Segment communicates on the <strong>433 MHz</strong> frequency band.</li>
+<li><strong>Performance:</strong> It is capable of a high transmit power of <strong>27 dBm</strong>, ensuring a strong link even in challenging environments.</li>
+<li><strong>Data Handling:</strong> The system supports a data rate of <strong>9.6 kbps</strong>, optimized for reliable transmission of satellite telemetry packets.</li>
+</ul>
+<h3 id="3-hardware-connectivity">3. Hardware Connectivity</h3>
+<ul>
+<li><strong>SPI Interface:</strong> The MCU communicates with the radio module using a dedicated high-speed <strong>SPI</strong> bus (MOSI: PA7, MISO: PA6, SCK: PA5, NSS: PB6).</li>
+<li><strong>Digital I/O:</strong> Multiple digital pins (PA8–PA10, PC1, PC7, PC8) are utilized for radio interrupts and reset signals to ensure robust operation.</li>
+<li><strong>Clock Accuracy:</strong> The board includes a 16MHz High-Speed External (HSE) crystal and a 32.768kHz Low-Speed External (LSE) crystal for precise timing during data processing.</li>
+</ul>
+<hr />
+<h2 id="technical-specifications">Technical Specifications</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Processor</strong></td>
+<td style="text-align: left;">STM32F103RC (ARM Cortex-M4)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Radio Frequency</strong></td>
+<td style="text-align: left;">433 MHz</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Transmit Power</strong></td>
+<td style="text-align: left;">27 dBm</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Rate</strong></td>
+<td style="text-align: left;">9.6 kbps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PC Connection</strong></td>
+<td style="text-align: left;">USB-C (UART via ST-Link)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Antenna</strong></td>
+<td style="text-align: left;">Integrated and External connector support</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example-code">Example Code</h2>
+<p>The following code provides a complete setup for the Ground Segment, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Code Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>GS TX/RX</strong></td>
+<td style="text-align: left;">Initialize the Ground Segment radio and perform basic transmit/receive operations.</td>
+<td style="text-align: left;"><a href="../../codes/gs/gs_tx_rx/gs_tx_rx.ino">gs_tx_rx.ino</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>User Note:</strong> When deploying your Ground Segment, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.</p>
 
 
 

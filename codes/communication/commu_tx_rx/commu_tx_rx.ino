@@ -1,7 +1,7 @@
 // include the library
 #include <RadioLib.h>
-#define TRANSMIT 1
-// #define RECEIVE 1
+// #define TRANSMIT 1
+#define RECEIVE 1
 
 SPIClass RADIO_SPI(PA7, PA6, PA5, -1);
 SX1278 radio = new Module(PB6, PA10, PC7, -1, RADIO_SPI);

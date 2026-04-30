@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#communication-com-subsystem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -367,6 +372,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication System (COMMS)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -384,6 +409,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-capabilities-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capabilities and Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Capabilities and Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-high-performance-radio-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. High-Performance Radio Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multi-protocol-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Protocol Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-interface-with-the-obc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Interface with the OBC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -470,6 +575,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-capabilities-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capabilities and Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Capabilities and Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-high-performance-radio-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. High-Performance Radio Link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multi-protocol-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multi-Protocol Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-interface-with-the-obc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Interface with the OBC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -486,9 +662,53 @@
 
 
 
-  <h1>Communication System (COMMS)</h1>
-
-
+<h1 id="communication-com-subsystem">Communication (COM) Subsystem</h1>
+<p>The <strong>Communication (COM) Subsystem</strong> acts as the satellite's primary wireless link to the Earth. Its fundamental role is to receive telecommands from the Ground Station and transmit vital telemetry data back to users, ensuring the satellite remains under control throughout its mission. </p>
+<p>This subsystem is powered by the <strong>STM32F411RE</strong> microcontroller, which manages a high-performance <strong>RFM98PW</strong> radio module for long-range data transmission.</p>
+<h2 id="key-capabilities-and-features">Key Capabilities and Features</h2>
+<p>The COM subsystem is engineered to meet specific aerospace communication standards, offering several core features:</p>
+<h3 id="1-high-performance-radio-link">1. High-Performance Radio Link</h3>
+<ul>
+<li><strong>Frequency:</strong> Operates at <strong>433 MHz</strong>, providing a robust link for amateur satellite bands.</li>
+<li><strong>Transmit Power:</strong> Capable of a high output power of <strong>27 dBm</strong>, ensuring signals can reach the ground station effectively.</li>
+<li><strong>Flexible Data Rates:</strong> Supports data rates from <strong>4.8 kbps up to 9.6 kbps</strong>, allowing for a balance between range and throughput.</li>
+<li><strong>Antenna Options:</strong> Features an integrated antenna for standard use and a dedicated connector for attaching external high-gain antennas.</li>
+</ul>
+<h3 id="2-multi-protocol-support">2. Multi-Protocol Support</h3>
+<ul>
+<li><strong>KISS Protocol:</strong> Supports the "Keep It Simple, Stupid" (KISS) protocol, a standard for framing data packets over serial and radio links.</li>
+<li><strong>Internal Communication:</strong> Uses high-speed <strong>SPI</strong> to communicate between the STM32 MCU and the radio module, and <strong>UART</strong> to interface with the On-Board Computer (OBC).</li>
+<li><strong>Direct Sensor Access:</strong> Connected to the shared <strong>I2C bus</strong>, allowing the COM module to read EPS telemetry (like battery voltage) directly for independent health reporting.</li>
+</ul>
+<h3 id="3-interface-with-the-obc">3. Interface with the OBC</h3>
+<p>The COM subsystem and the OBC work in tandem to process incoming commands:
+*   <strong>Command Handling:</strong> When the COM module receives a packet from the ground, it passes the data to the OBC via a dedicated UART link (PA2/PA3).
+*   <strong>Telemetry Reporting:</strong> The OBC sends system status updates to the COM module, which then modulates and transmits them back to the Ground Station.</p>
+<hr />
+<h2 id="example-code-documentation">Example Code &amp; Documentation</h2>
+<p>The following examples provide a starting point for developing your own communication software. They demonstrate how to handle messages between the OBC and how to configure the radio for transmission and reception.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Code Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Radio TX/RX</strong></td>
+<td style="text-align: left;">Basic routine to initialize the RFM98PW and send/receive radio packets.</td>
+<td style="text-align: left;"><a href="../../codes/communication/commu_tx_rx/commu_tx_rx.ino">commu_tx_rx.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>OBC Link</strong></td>
+<td style="text-align: left;">Demonstrates how the COM module receives and responds to messages from the OBC.</td>
+<td style="text-align: left;"><a href="../../codes/communication/commu_msg_from_obc/commu_msg_from_obc.ino">commu_msg_from_obc.ino</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> For the communication link to work, ensure your Ground Station is configured to the same frequency (433 MHz) and data rate as your satellite's COM module.</p>
 
 
 

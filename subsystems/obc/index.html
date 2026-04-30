@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#on-board-computer-obc-subsystem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -311,6 +316,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On-board Computer (OBC)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -328,6 +353,97 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-capabilities-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capabilities and Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Capabilities and Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-central-processing-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Central Processing &amp; Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-storage-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Storage &amp; Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-peripheral-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Peripheral Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-integrated-power-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Integrated Power Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -470,6 +586,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-capabilities-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capabilities and Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Capabilities and Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-central-processing-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Central Processing &amp; Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-storage-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Storage &amp; Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-peripheral-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Peripheral Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-integrated-power-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Integrated Power Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-code-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code &amp; Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -486,9 +684,105 @@
 
 
 
-  <h1>On-board Computer (OBC)</h1>
-
-
+<h1 id="on-board-computer-obc-subsystem">On-Board Computer (OBC) Subsystem</h1>
+<p>The <strong>On-Board Computer (OBC)</strong> serves as the primary "brain" of the FlatSat satellite, responsible for coordinating mission logic, handling data, and managing communication between all other subsystems,,. It is built around the high-performance <strong>STM32F429ZI</strong> microcontroller, which provides the necessary processing power and peripheral connectivity for satellite operations.</p>
+<h2 id="key-capabilities-and-features">Key Capabilities and Features</h2>
+<p>Based on the system architecture and technical requirements, the OBC manages the following core functions:</p>
+<h3 id="1-central-processing-logic">1. Central Processing &amp; Logic</h3>
+<ul>
+<li><strong>Microcontroller:</strong> Utilizes an STM32F429ZI MCU for high-level processing.</li>
+<li><strong>Mission Execution:</strong> Coordinates tasks such as taking images, reading GPS coordinates, and communicating with the ground station,,.</li>
+<li><strong>System Testing:</strong> Executes unified test routines to verify the health of GPIO, UART, I2C, SPI, and connected sensors,.</li>
+</ul>
+<h3 id="2-data-storage-memory">2. Data Storage &amp; Memory</h3>
+<p>The OBC provides multiple layers of memory for flight software, telemetry logging, and mission data:</p>
+<ul>
+<li><strong>Internal Flash:</strong> 2 MB of high-speed internal storage.</li>
+<li><strong>External SPI Flash:</strong> A 128M-bit (16 MB) W25Q128 memory chip for non-volatile data storage,.</li>
+<li><strong>Micro SD Card:</strong> Supports high-capacity storage via a dedicated SPI interface, essential for saving large mission files like payload images,,.</li>
+</ul>
+<h3 id="3-peripheral-connectivity">3. Peripheral Connectivity</h3>
+<p>The OBC interacts with the rest of the satellite through various standardized protocols,:</p>
+<ul>
+<li><strong>Dual I2C Buses:</strong> <ul>
+<li><strong>Internal I2C:</strong> Connects to an on-board Real-Time Clock (RTC) and temperature sensors,.</li>
+<li><strong>EPS I2C:</strong> Directly controls the Electrical Power System's sensors (INA226, TMP102) and hot-swap controllers (ADM1177),,.</li>
+</ul>
+</li>
+<li><strong>Multi-Channel UART:</strong> <ul>
+<li><strong>GPS:</strong> Dedicated link for satellite positioning data,,.</li>
+<li><strong>Communication Subsystem:</strong> Facilitates telecommand and telemetry links to the Ground Segment,,,.</li>
+<li><strong>Debug/Console:</strong> Connected to the ST-Link for real-time monitoring via a PC.</li>
+</ul>
+</li>
+<li><strong>SPI Bus:</strong> High-speed connection used for the Camera Payload and SD card operations,,.</li>
+<li><strong>CAN Bus:</strong> Integrated via an SN65HVD230 transceiver, providing a robust interface to the PC104 expansion bus for additional user subsystems,,.</li>
+</ul>
+<h3 id="4-integrated-power-management">4. Integrated Power Management</h3>
+<p>The OBC directly manages the satellite's power distribution,:</p>
+<ul>
+<li><strong>Direct Control:</strong> Four dedicated GPIO pins (PD0–PD3) act as power control switches,,.</li>
+<li><strong>Monitoring:</strong> Through the EPS I2C bus, the OBC can read real-time voltage, current, and battery health data directly from the hardware sensors,,.</li>
+</ul>
+<hr />
+<h2 id="example-code-documentation">Example Code &amp; Documentation</h2>
+<p>The following example codes demonstrate how to interact with the OBC's hardware features. These files can be integrated into your development environment to learn the fundamentals of satellite embedded programming.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Code Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>System Test</strong></td>
+<td style="text-align: left;">A unified routine testing all OBC peripherals sequentially.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_system_test/obc_system_test.ino">obc_system_test.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>EPS Monitoring</strong></td>
+<td style="text-align: left;">Read voltage and current from the EPS sensors via I2C.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_read_eps/obc_read_eps.ino">obc_read_eps.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Power Control</strong></td>
+<td style="text-align: left;">Toggle the four primary power channels (PD0–PD3).</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_power_control/obc_power_control.ino">obc_power_control.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Camera to SD</strong></td>
+<td style="text-align: left;">Capture an image from the payload and save it to the SD card.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_camera2sd/obc_camera2sd.ino">obc_camera2sd.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>GPS Acquisition</strong></td>
+<td style="text-align: left;">Read and parse positioning data from the GPS module.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_gps_read/obc_gps_read.ino">obc_gps_read.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Commu Link</strong></td>
+<td style="text-align: left;">Send messages and telecommands to the Communication module.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_msg_to_commu/obc_msg_to_commu.ino">obc_msg_to_commu.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPI Flash</strong></td>
+<td style="text-align: left;">Interface with the external W25Q128 memory chip.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_flash/obc_flash.ino">obc_flash.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SD Card</strong></td>
+<td style="text-align: left;">Initialize and perform basic file operations on the Micro SD card.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_sd_card/obc_sd_card.ino">obc_sd_card.ino</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I2C Scanning</strong></td>
+<td style="text-align: left;">Identify connected devices on the Internal and EPS I2C buses.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_int_i2c_scan/obc_int_i2c_scan.ino">obc_int_i2c_scan.ino</a></td>
+</tr>
+</tbody>
+</table>
 
 
 

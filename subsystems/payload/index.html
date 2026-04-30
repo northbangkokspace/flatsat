@@ -454,13 +454,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#camera-payload" class="md-nav__link">
+  <a href="#camera-payload-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Camera Payload
+        Camera Payload Subsystem
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Camera Payload Subsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mission-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -557,13 +607,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#camera-payload" class="md-nav__link">
+  <a href="#camera-payload-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Camera Payload
+        Camera Payload Subsystem
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Camera Payload Subsystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mission-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -607,9 +707,89 @@
 
 
 <h1 id="payload">Payload</h1>
-<p><a href="#pc104-payload-expansion">a</a></p>
-<h2 id="camera-payload">Camera Payload</h2>
+<h2 id="camera-payload-subsystem">Camera Payload Subsystem</h2>
+<p>The <strong>Camera Payload</strong> represents the primary "mission" of the FlatSat satellite. It consists of a high-resolution imaging system designed to capture visual data of the "Earth" (or its surroundings) and transmit that data to the On-Board Computer (OBC) for processing and storage.</p>
+<h3 id="technical-specifications">Technical Specifications</h3>
+<p>The payload is built to provide high-quality imagery while maintaining a low power profile suitable for small satellite operations:</p>
+<ul>
+<li><strong>Resolution:</strong> 5 Megapixels.</li>
+<li><strong>Image Format:</strong> Supports compressed <strong>JPEG</strong> output, which is ideal for reducing the data volume transmitted over satellite radio links.</li>
+<li><strong>Interface:</strong> Uses a combination of high-speed <strong>SPI</strong> for transferring large image data and <strong>I2C</strong> for camera configuration and control.</li>
+<li><strong>Control Logic:</strong> The payload is directly managed by the <strong>STM32F429ZI</strong> MCU on the OBC.</li>
+</ul>
+<h3 id="hardware-connectivity">Hardware Connectivity</h3>
+<p>The Camera Payload is connected to the OBC via several dedicated pins to ensure high-speed data handling:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Interface</th>
+<th style="text-align: left;">OBC Pin</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>SPI CS</strong></td>
+<td style="text-align: left;"><strong>PE7</strong></td>
+<td style="text-align: left;">Chip Select for the Camera module.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPI MOSI</strong></td>
+<td style="text-align: left;"><strong>PB15</strong></td>
+<td style="text-align: left;">Master Out Slave In for data transmission.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPI MISO</strong></td>
+<td style="text-align: left;"><strong>PB14</strong></td>
+<td style="text-align: left;">Master In Slave Out for data reception.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPI SCK</strong></td>
+<td style="text-align: left;"><strong>PB13</strong></td>
+<td style="text-align: left;">Serial Clock.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I2C SDA</strong></td>
+<td style="text-align: left;"><strong>PB9</strong></td>
+<td style="text-align: left;">Serial Data for camera configuration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I2C SCL</strong></td>
+<td style="text-align: left;"><strong>PB8</strong></td>
+<td style="text-align: left;">Serial Clock for camera configuration.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: In some software implementations, SPI pins may be dynamically remapped to PB3, PB4, and PB5 to avoid conflicts with other SPI peripherals like the Flash memory.</em></p>
+<h3 id="mission-operations">Mission Operations</h3>
+<p>The typical operational flow for the camera payload involves the following steps:</p>
+<ol>
+<li><strong>Initialization:</strong> The OBC initializes the camera sensor via the SPI/I2C interface.</li>
+<li><strong>Capture:</strong> The OBC sends a "take picture" command.</li>
+<li><strong>Buffering:</strong> Image data is read from the camera's internal memory in small chunks (buffers).</li>
+<li><strong>Storage:</strong> The OBC writes these chunks sequentially to the <strong>Micro SD card</strong> (using the PC9/PC10/PC11/PC12 pins) to create a final <code>.jpg</code> image file.</li>
+</ol>
+<hr />
+<h3 id="example-code">Example Code</h3>
+<p>The following example code demonstrates how to trigger a picture capture and save the resulting file to the on-board SD card.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Code Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Camera to SD</strong></td>
+<td style="text-align: left;">Capture a 5MP image and save it as a JPEG file on the SD card.</td>
+<td style="text-align: left;"><a href="../../codes/obc/obc_camera2sd/obc_camera2sd.ino">obc_camera2sd.ino</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="pc104-payload-expansion">PC104 Payload Expansion</h2>
+<p>loream loream </p>
 <h2 id="gps-payload">GPS Payload</h2>
 
 
