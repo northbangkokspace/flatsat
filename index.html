@@ -1,0 +1,878 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="NBSpace">
+      
+      
+      
+      
+        <link rel="next" href="subsystems/obc/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Flatsat Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flatsat-satellite-learning-kit-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Flatsat Documentation" class="md-header__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
+      
+  <img src="assets/nb_logo_w.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Flatsat Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Flatsat Documentation" class="md-nav__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
+      
+  <img src="assets/nb_logo_w.png" alt="logo">
+
+    </a>
+    Flatsat Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Subsystems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Subsystems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-on-board-computer-obc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. On-Board Computer (OBC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-electrical-power-system-eps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Electrical Power System (EPS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-communication-subsystem-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Communication Subsystem (COM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-camera-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Camera Payload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ground-segment-gs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ground Segment (GS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pc104-expansion-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The PC104 Expansion Bus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subsystems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Subsystems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subsystems/obc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    On-board Computer (OBC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subsystems/eps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electrical Power System (EPS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subsystems/communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communication System (COMMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subsystems/payload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payload
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subsystems/ground-segment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ground Station
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Subsystems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Subsystems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-on-board-computer-obc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. On-Board Computer (OBC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-electrical-power-system-eps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Electrical Power System (EPS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-communication-subsystem-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Communication Subsystem (COM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-camera-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Camera Payload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-ground-segment-gs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ground Segment (GS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pc104-expansion-bus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The PC104 Expansion Bus
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="flatsat-satellite-learning-kit-overview">FlatSat Satellite Learning Kit: Overview</h1>
+<p>Welcome to the <strong>FlatSat Learning Kit</strong> documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.</p>
+<p>The kit is divided into two primary segments: the <strong>Space Segment</strong> (the FlatSat itself) and the <strong>Ground Segment</strong> (the station used to communicate with the satellite).</p>
+<hr />
+<h2 id="system-architecture">System Architecture</h2>
+<p>The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized <strong>PC104 Bus</strong>. A key feature of this design is its <strong>centralized control logic</strong>: while most subsystems have their own dedicated processors, the <strong>Electrical Power System (EPS)</strong> is controlled directly by the <strong>On-Board Computer (OBC)</strong> via a shared I2C bus.</p>
+<h3 id="key-subsystems">Key Subsystems</h3>
+<h4 id="1-on-board-computer-obc">1. <a href="subsystems/obc/">On-Board Computer (OBC)</a></h4>
+<p>The <strong>OBC</strong> serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it acts as the controller for the EPS hardware.</p>
+<ul>
+<li><strong>Core MCU:</strong> STM32F429ZI.</li>
+<li><strong>Key Functions:</strong> High-level processing, GPS data acquisition, and executing control logic for the EPS sensors and switches.</li>
+<li><strong>Storage:</strong> Supports external SD Card and 2MB of internal Flash memory.</li>
+<li><strong><a href="subsystems/obc/">Technical Details &amp; Example Code</a></strong></li>
+</ul>
+<h4 id="2-electrical-power-system-eps">2. <a href="subsystems/eps/">Electrical Power System (EPS)</a></h4>
+<p>The <strong>EPS</strong> is the hardware layer responsible for harvesting, storing, and distributing power. <strong>Unlike other modules, the EPS does not have its own microcontroller;</strong> instead, all of its monitoring sensors and power switches are connected directly to the OBC's I2C bus.</p>
+<ul>
+<li><strong>Components:</strong> Li-ion 18650 battery (17Wh+), solar charging simulation, and a network of I2C-controlled sensors.</li>
+<li><strong>Control Mechanism:</strong> The OBC MCU directly toggles the power switches (ADM1177) and reads telemetry from current, voltage, and temperature sensors (INA226, TMP102) over I2C.</li>
+<li><strong>Key Functions:</strong> Battery management, power rail switching, and real-time power telemetry.</li>
+<li><strong><a href="subsystems/eps/">Technical Details &amp; Example Code</a></strong></li>
+</ul>
+<h4 id="3-communication-subsystem-com">3. <a href="subsystems/communication/">Communication Subsystem (COM)</a></h4>
+<p>The <strong>COM</strong> module handles the wireless link between the FlatSat and the Ground Station, allowing for telecommands to be received and telemetry to be sent back to Earth.
+*   <strong>Core MCU:</strong> STM32F411RE.
+*   <strong>Radio Module:</strong> RFM98PW (433 MHz).
+*   <strong>Key Functions:</strong> Radio frequency modulation, KISS protocol implementation, and data packet handling.
+*   <strong><a href="subsystems/communication/">Technical Details &amp; Example Code</a></strong></p>
+<h4 id="4-camera-payload">4. <a href="subsystems/payload/">Camera Payload</a></h4>
+<p>The <strong>Payload</strong> represents the "mission" of the satellite, consisting of an imaging system used to capture and process visual data.</p>
+<ul>
+<li><strong>Specifications:</strong> 5 Megapixel resolution.</li>
+<li><strong>Key Functions:</strong> Image capture and data transfer to the OBC via the SPI protocol.</li>
+<li><strong><a href="subsystems/payload/">Technical Details &amp; Example Code</a></strong></li>
+</ul>
+<h4 id="5-ground-segment-gs">5. <a href="subsystems/ground-segment/">Ground Segment (GS)</a></h4>
+<p>The <strong>Ground Segment</strong> is the terrestrial hardware that allows users to interact with the FlatSat, mimicking a real-world satellite ground station.</p>
+<ul>
+<li><strong>Core MCU:</strong> STM32F411RE.</li>
+<li><strong>Radio Module:</strong> RFM98PW (433 MHz).</li>
+<li><strong>Key Functions:</strong> Receiving satellite telemetry and transmitting control commands via a PC interface (USB-C).</li>
+<li><strong><a href="subsystems/ground-segment/">Technical Details &amp; Example Code</a></strong></li>
+</ul>
+<h3 id="the-pc104-expansion-bus"><a href="subsystems/payload/#pc104-payload-expansion">The PC104 Expansion Bus</a></h3>
+<p>The FlatSat Learning Kit is designed for modularity and extensibility, featuring <strong>two dedicated PC104 bus slots</strong>,. These slots provide a standardized interface that allows users to integrate their own custom subsystems or additional mission payloads into the satellite's architecture.</p>
+<p>Each PC104 interface provides a comprehensive suite of power and data connections to ensure seamless integration with the existing satellite segments:</p>
+<ul>
+<li><strong>Power Distribution:</strong> Includes <strong>two controllable power channels</strong>, allowing users to manage the energy consumption of their custom hardware effectively,.</li>
+<li><strong>High-Speed Data Links:</strong> Provides direct <strong>UART</strong> and <strong>CAN Bus</strong> connections to the On-Board Computer (OBC) for robust command and data handling,.</li>
+</ul>
+<hr />
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>Through this documentation and the associated hardware, you will learn:</p>
+<ul>
+<li><strong>Unified System Control:</strong> Managing multiple hardware subsystems (OBC and EPS) from a single powerful microcontroller.</li>
+<li><strong>Embedded Programming:</strong> Developing for STM32 microcontrollers in a space-system context.</li>
+<li><strong>Communication Protocols:</strong> Implementing UART, I2C, SPI, and CAN bus for inter-subsystem and sensor communication.</li>
+<li><strong>Power Management:</strong> Directly monitoring energy consumption and managing battery cycles through I2C sensor integration.</li>
+<li><strong>RF Communications:</strong> Understanding 433MHz radio links and packet protocols like KISS.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
