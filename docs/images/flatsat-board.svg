@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="108.16064mm"
+   height="87.990143mm"
+   viewBox="0 0 108.16064 87.990143"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="108.16064"
+       height="87.990143"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-79.512687,-70.450574)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:0.254;stroke-linecap:round"
+       id="rect1"
+       width="108.16064"
+       height="87.990135"
+       x="79.512688"
+       y="70.450577"
+       ry="3.517164" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:9.87777px;font-family:K2d;-inkscape-font-specification:'K2d Medium';text-align:start;writing-mode:lr-tb;direction:ltr;text-orientation:upright;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.254;stroke-linecap:round"
+       x="107.28366"
+       y="116.34576"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.254"
+         x="107.28366"
+         y="116.34576">Flatsat.svg</tspan></text>
+  </g>
+</svg>

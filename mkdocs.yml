@@ -1,0 +1,27 @@
+site_name: Flatsat Documentation
+extra_css:
+  - stylesheets/extra.css
+theme:
+  name: material
+  logo: assets/nb_logo_w.png
+  palette: 
+    - scheme: default # Light mode
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate # Dark mode
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+# repo_url: https://openfruit.space
+site_author: NBSpace
+nav:
+  - Home: index.md
+  - Subsystems:
+      - On-board Computer (OBC): subsystems/obc.md
+      - Electrical Power System (EPS): subsystems/eps.md
+      - Communication System (COMMS): subsystems/communication.md
+      - Payload: subsystems/payload.md
+      - Ground Station: subsystems/ground-segment.md
