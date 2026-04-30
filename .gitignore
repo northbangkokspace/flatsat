@@ -1,5 +1,7 @@
 .venv
 all_codes.zip
-coo_sources
+cpp_source/
+site
 all_codes
+file_tree.txt
 .DS_Store
