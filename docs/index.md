@@ -2,6 +2,11 @@
 
 Welcome to the **FlatSat Learning Kit** documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.
 
+<figure>
+<img src="assets/diagram/overall_system_diagram.svg"/>
+<caption>Flatsat Architecture</caption>
+</figure>
+
 The kit is divided into two primary segments: the **Space Segment** (the FlatSat itself) and the **Ground Segment** (the station used to communicate with the satellite).
 
 ---
@@ -13,7 +18,7 @@ The FlatSat architecture centers around a main circuit board where various subsy
 ### Key Subsystems
 
 #### 1. [On-Board Computer (OBC)](subsystems/obc.md)
-The **OBC** serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it acts as the controller for the EPS hardware.
+The **OBC** serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it also acts as the controller for the EPS hardware.
 
 *   **Core MCU:** STM32F429ZI.
 *   **Key Functions:** High-level processing, GPS data acquisition, and executing control logic for the EPS sensors and switches.
@@ -21,6 +26,10 @@ The **OBC** serves as the primary "brain" for the entire satellite. In addition 
 *   **[Technical Details & Example Code](./subsystems/obc.md)**
 
 #### 2. [Electrical Power System (EPS)](subsystems/eps.md)
+<figure>
+<img src="assets/diagram/eps_simplified.svg"/>
+<caption>EPS Power diagram</caption>
+</figure>
 The **EPS** is the hardware layer responsible for harvesting, storing, and distributing power. **Unlike other modules, the EPS does not have its own microcontroller;** instead, all of its monitoring sensors and power switches are connected directly to the OBC's I2C bus.
 
 *   **Components:** Li-ion 18650 battery (17Wh+), solar charging simulation, and a network of I2C-controlled sensors.

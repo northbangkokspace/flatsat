@@ -20,6 +20,11 @@ The Ground Segment is built on a high-performance architecture designed for reli
 *   **Digital I/O:** Multiple digital pins (PA8–PA10, PC1, PC7, PC8) are utilized for radio interrupts and reset signals to ensure robust operation.
 *   **Clock Accuracy:** The board includes a 16MHz High-Speed External (HSE) crystal and a 32.768kHz Low-Speed External (LSE) crystal for precise timing during data processing.
 
+<figure>
+<img src="../../assets/diagram/gs_block_diagram.svg"/>
+<caption>Ground Station Block diagram</caption>
+</figure>
+
 ---
 
 ## Technical Specifications

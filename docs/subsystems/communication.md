@@ -21,14 +21,33 @@ The COM subsystem is engineered to meet specific aerospace communication standar
 
 ### 3. Interface with the OBC
 The COM subsystem and the OBC work in tandem to process incoming commands:
+
 *   **Command Handling:** When the COM module receives a packet from the ground, it passes the data to the OBC via a dedicated UART link (PA2/PA3).
 *   **Telemetry Reporting:** The OBC sends system status updates to the COM module, which then modulates and transmits them back to the Ground Station.
 
 ---
 
+## Block Diagram
+
+<figure>
+<img src="../../assets/diagram/communication_block_diagram.svg"/>
+<caption>Communication Block diagram</caption>
+</figure>
+
 ## Example Code & Documentation
 
 The following examples provide a starting point for developing your own communication software. They demonstrate how to handle messages between the OBC and how to configure the radio for transmission and reception.
+
+### Prerequisite Library
+These Arduino Library are needed to be installed to be able to use provided example code
+
+1. **RadioLib** is a versatile radio communication library that supports a wide range of wireless modules, including LoRa, FSK, and other RF transceivers. It handles packet encoding, modulation settings, and radio control, making it easy to implement long-range or low-power wireless communication. This project uses RadioLib to manage communication with the LoRa module.
+<figure>
+<img src="../../assets/radiolib.png"/>
+</figure>
+> Code provided works with library version 7.5.0
+>
+> Library can be installed from Arduino IDE's library manager
 
 | Feature | Description | Code Link |
 | :--- | :--- | :--- |

@@ -2,6 +2,11 @@
 
 The **On-Board Computer (OBC)** serves as the primary "brain" of the FlatSat satellite, responsible for coordinating mission logic, handling data, and managing communication between all other subsystems,,. It is built around the high-performance **STM32F429ZI** microcontroller, which provides the necessary processing power and peripheral connectivity for satellite operations.
 
+<figure>
+<img src="../../assets/diagram/obc_wiring_diagram.svg"/>
+<caption>OBC Pinout diagram</caption>
+</figure>
+
 ## Key Capabilities and Features
 
 Based on the system architecture and technical requirements, the OBC manages the following core functions:
@@ -41,6 +46,22 @@ The OBC directly manages the satellite's power distribution,:
 ---
 
 ## Example Code & Documentation
+
+
+### Prerequisite Library
+These Arduino Library are needed to be installed to be able to use provided example code
+
+**SdFat** is an advanced SD card file system library that provides fast and reliable read/write access to SD cards using SPI. It is more efficient and stable than the default SD library, especially when working with large files or continuous data logging. This project uses SdFat to store sensor data and system logs on the SD card.
+<figure>
+<img src="../../assets/sdfat.png"/>
+</figure>
+**Grove High Precision RTC** (PCF85063TP) is a real-time clock library used to keep accurate time even when the microcontroller is powered off. It provides timestamping for files, logs, and events, ensuring the system always maintains correct date and time information. This project uses the RTC to timestamp sensor readings and system activity.
+<figure>
+<img src="../../assets/rtc.png"/>
+</figure>
+
+> All libraries can be installed form Arduino IDE-s Library manager
+
 
 The following example codes demonstrate how to interact with the OBC's hardware features. These files can be integrated into your development environment to learn the fundamentals of satellite embedded programming.
 

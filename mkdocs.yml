@@ -4,6 +4,9 @@ extra_css:
 theme:
   name: material
   logo: assets/nb_logo_w.png
+  font:
+    text: Inter
+    code: Roboto Mono
   palette: 
     - scheme: default # Light mode
       primary: black

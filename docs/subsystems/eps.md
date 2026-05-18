@@ -24,11 +24,41 @@ For benchtop testing and debugging, the EPS board provides physical access point
 
 ### 4. Comprehensive Telemetry
 The subsystem is densely populated with sensors to provide real-time health data:
+
 *   **Current and Voltage:** Six **INA226** sensors monitor the performance of solar inputs and main power rails.
 *   **Temperature Monitoring:** Dual **TMP102** sensors track the thermal state of the battery pack to ensure safe operation.
 *   **Direct Access:** Because these sensors reside on a shared I2C bus, they can be accessed by the OBC or even custom user-modules on the PC104 bus for independent telemetry logging.
 
 ---
+
+### Components and Block diagram
+
+<figure>
+<img src="../../assets/diagram/eps_block_diagram.svg"/>
+<caption>EPS System diagram</caption>
+</figure>
+
+The EPS consists of 4 + 1 Power inputs (4 For solar cells and 1 for USB) and 4 Power outputs for each subsystems in the Flatsat each attached with power voltage and current sensor for power monitoring and 2 Temperature Sensors for each battery as following table
+
+| Label | Part No. | I2C Address | Description |
+| :---- | :------- | :---------- | :---------- |
+| Sensor 1 | INA226 | 0x40 | Solar Cell Input Channel 1 Voltage and Current Monitor |
+| Sensor 2 | INA226 | 0x41 | Solar Cell Input Channel 2 Voltage and Current Monitor |
+| Sensor 3 | INA226 | 0x42 | Solar Cell Input Channel 3 Voltage and Current Monitor |
+| Sensor 4 | INA226 | 0x43 | Solar Cell Input Channel 4 Voltage and Current Monitor |
+| Sensor 5 | INA226 | 0x47 | Battery Charging Voltage and Current Monitor |
+| Sensor 6 | INA226 | 0x48 | Battery Discharging Voltage and Current Monitor |
+| Output 1 | ADM1177 | 0x58 | OBC Power Switch and Voltage/Current Monitor |
+| Output 2 | ADM1177 | 0x59 | Communication Power Switch and Voltage/Current Monitor |
+| Output 3 | ADM1177 | 0x5A | Payload 1 Power Switch and Voltage/Current Monitor |
+| Output 4 | ADM1177 | 0x5B | Payload 2 Power Switch and Voltage/Current Monitor |
+| Temp Sensor 1 | TMP102 | 0x4A | Battery 1 Temperature Sensor |
+| Temp Sensor 2 | TMP102 | 0x4B | Battery 2 Temperature Sensor |
+
+
+> Output 2,3,4 are connected to OBC's Pin PD1,PD2,PD3 Respectively
+> 
+> Output 1 cannot be turned off since it powers the OBC
 
 ## Technical Specifications
 
