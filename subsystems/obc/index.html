@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -439,6 +439,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Code &amp; Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisite-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisite Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -665,6 +682,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Example Code &amp; Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisite-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisite Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -686,6 +720,11 @@
 
 <h1 id="on-board-computer-obc-subsystem">On-Board Computer (OBC) Subsystem</h1>
 <p>The <strong>On-Board Computer (OBC)</strong> serves as the primary "brain" of the FlatSat satellite, responsible for coordinating mission logic, handling data, and managing communication between all other subsystems,,. It is built around the high-performance <strong>STM32F429ZI</strong> microcontroller, which provides the necessary processing power and peripheral connectivity for satellite operations.</p>
+<figure>
+<img src="../../assets/diagram/obc_wiring_diagram.svg"/>
+<caption>OBC Pinout diagram</caption>
+</figure>
+
 <h2 id="key-capabilities-and-features">Key Capabilities and Features</h2>
 <p>Based on the system architecture and technical requirements, the OBC manages the following core functions:</p>
 <h3 id="1-central-processing-logic">1. Central Processing &amp; Logic</h3>
@@ -726,6 +765,20 @@
 </ul>
 <hr />
 <h2 id="example-code-documentation">Example Code &amp; Documentation</h2>
+<h3 id="prerequisite-library">Prerequisite Library</h3>
+<p>These Arduino Library are needed to be installed to be able to use provided example code</p>
+<p><strong>SdFat</strong> is an advanced SD card file system library that provides fast and reliable read/write access to SD cards using SPI. It is more efficient and stable than the default SD library, especially when working with large files or continuous data logging. This project uses SdFat to store sensor data and system logs on the SD card.</p>
+<figure>
+<img src="../../assets/sdfat.png"/>
+</figure>
+<p><strong>Grove High Precision RTC</strong> (PCF85063TP) is a real-time clock library used to keep accurate time even when the microcontroller is powered off. It provides timestamping for files, logs, and events, ensuring the system always maintains correct date and time information. This project uses the RTC to timestamp sensor readings and system activity.</p>
+<figure>
+<img src="../../assets/rtc.png"/>
+</figure>
+
+<blockquote>
+<p>All libraries can be installed form Arduino IDE-s Library manager</p>
+</blockquote>
 <p>The following example codes demonstrate how to interact with the OBC's hardware features. These files can be integrated into your development environment to learn the fundamentals of satellite embedded programming.</p>
 <table>
 <thead>

@@ -44,8 +44,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -760,13 +760,18 @@
 
 <h1 id="flatsat-satellite-learning-kit-overview">FlatSat Satellite Learning Kit: Overview</h1>
 <p>Welcome to the <strong>FlatSat Learning Kit</strong> documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.</p>
+<figure>
+<img src="assets/diagram/overall_system_diagram.svg"/>
+<caption>Flatsat Architecture</caption>
+</figure>
+
 <p>The kit is divided into two primary segments: the <strong>Space Segment</strong> (the FlatSat itself) and the <strong>Ground Segment</strong> (the station used to communicate with the satellite).</p>
 <hr />
 <h2 id="system-architecture">System Architecture</h2>
 <p>The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized <strong>PC104 Bus</strong>. A key feature of this design is its <strong>centralized control logic</strong>: while most subsystems have their own dedicated processors, the <strong>Electrical Power System (EPS)</strong> is controlled directly by the <strong>On-Board Computer (OBC)</strong> via a shared I2C bus.</p>
 <h3 id="key-subsystems">Key Subsystems</h3>
 <h4 id="1-on-board-computer-obc">1. <a href="subsystems/obc/">On-Board Computer (OBC)</a></h4>
-<p>The <strong>OBC</strong> serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it acts as the controller for the EPS hardware.</p>
+<p>The <strong>OBC</strong> serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it also acts as the controller for the EPS hardware.</p>
 <ul>
 <li><strong>Core MCU:</strong> STM32F429ZI.</li>
 <li><strong>Key Functions:</strong> High-level processing, GPS data acquisition, and executing control logic for the EPS sensors and switches.</li>
@@ -774,6 +779,10 @@
 <li><strong><a href="subsystems/obc/">Technical Details &amp; Example Code</a></strong></li>
 </ul>
 <h4 id="2-electrical-power-system-eps">2. <a href="subsystems/eps/">Electrical Power System (EPS)</a></h4>
+<figure>
+<img src="assets/diagram/eps_simplified.svg"/>
+<caption>EPS Power diagram</caption>
+</figure>
 <p>The <strong>EPS</strong> is the hardware layer responsible for harvesting, storing, and distributing power. <strong>Unlike other modules, the EPS does not have its own microcontroller;</strong> instead, all of its monitoring sensors and power switches are connected directly to the OBC's I2C bus.</p>
 <ul>
 <li><strong>Components:</strong> Li-ion 18650 battery (17Wh+), solar charging simulation, and a network of I2C-controlled sensors.</li>

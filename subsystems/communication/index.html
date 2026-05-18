@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -476,6 +476,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-code-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -483,6 +494,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Example Code &amp; Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisite-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisite Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -635,6 +663,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-code-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -642,6 +681,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Example Code &amp; Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisite-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisite Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -681,12 +737,32 @@
 <li><strong>Direct Sensor Access:</strong> Connected to the shared <strong>I2C bus</strong>, allowing the COM module to read EPS telemetry (like battery voltage) directly for independent health reporting.</li>
 </ul>
 <h3 id="3-interface-with-the-obc">3. Interface with the OBC</h3>
-<p>The COM subsystem and the OBC work in tandem to process incoming commands:
-*   <strong>Command Handling:</strong> When the COM module receives a packet from the ground, it passes the data to the OBC via a dedicated UART link (PA2/PA3).
-*   <strong>Telemetry Reporting:</strong> The OBC sends system status updates to the COM module, which then modulates and transmits them back to the Ground Station.</p>
+<p>The COM subsystem and the OBC work in tandem to process incoming commands:</p>
+<ul>
+<li><strong>Command Handling:</strong> When the COM module receives a packet from the ground, it passes the data to the OBC via a dedicated UART link (PA2/PA3).</li>
+<li><strong>Telemetry Reporting:</strong> The OBC sends system status updates to the COM module, which then modulates and transmits them back to the Ground Station.</li>
+</ul>
 <hr />
+<h2 id="block-diagram">Block Diagram</h2>
+<figure>
+<img src="../../assets/diagram/communication_block_diagram.svg"/>
+<caption>Communication Block diagram</caption>
+</figure>
+
 <h2 id="example-code-documentation">Example Code &amp; Documentation</h2>
 <p>The following examples provide a starting point for developing your own communication software. They demonstrate how to handle messages between the OBC and how to configure the radio for transmission and reception.</p>
+<h3 id="prerequisite-library">Prerequisite Library</h3>
+<p>These Arduino Library are needed to be installed to be able to use provided example code</p>
+<ol>
+<li><strong>RadioLib</strong> is a versatile radio communication library that supports a wide range of wireless modules, including LoRa, FSK, and other RF transceivers. It handles packet encoding, modulation settings, and radio control, making it easy to implement long-range or low-power wireless communication. This project uses RadioLib to manage communication with the LoRa module.</li>
+</ol>
+<figure>
+<img src="../../assets/radiolib.png"/>
+</figure>
+<blockquote>
+<p>Code provided works with library version 7.5.0</p>
+<p>Library can be installed from Arduino IDE's library manager</p>
+</blockquote>
 <table>
 <thead>
 <tr>

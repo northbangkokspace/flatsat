@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -453,6 +453,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#components-and-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components and Block diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -662,6 +673,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#components-and-block-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components and Block diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -726,11 +748,108 @@
 *   <strong>Test Points:</strong> Dedicated test points are available to easily hook up oscilloscope probes for signal monitoring.
 *   <strong>Current Measurement:</strong> The board includes banana jacks. When the designated switch is pushed down, you can connect an external amp meter directly via these jacks to measure the current draw of the power bus.</p>
 <h3 id="4-comprehensive-telemetry">4. Comprehensive Telemetry</h3>
-<p>The subsystem is densely populated with sensors to provide real-time health data:
-*   <strong>Current and Voltage:</strong> Six <strong>INA226</strong> sensors monitor the performance of solar inputs and main power rails.
-*   <strong>Temperature Monitoring:</strong> Dual <strong>TMP102</strong> sensors track the thermal state of the battery pack to ensure safe operation.
-*   <strong>Direct Access:</strong> Because these sensors reside on a shared I2C bus, they can be accessed by the OBC or even custom user-modules on the PC104 bus for independent telemetry logging.</p>
+<p>The subsystem is densely populated with sensors to provide real-time health data:</p>
+<ul>
+<li><strong>Current and Voltage:</strong> Six <strong>INA226</strong> sensors monitor the performance of solar inputs and main power rails.</li>
+<li><strong>Temperature Monitoring:</strong> Dual <strong>TMP102</strong> sensors track the thermal state of the battery pack to ensure safe operation.</li>
+<li><strong>Direct Access:</strong> Because these sensors reside on a shared I2C bus, they can be accessed by the OBC or even custom user-modules on the PC104 bus for independent telemetry logging.</li>
+</ul>
 <hr />
+<h3 id="components-and-block-diagram">Components and Block diagram</h3>
+<figure>
+<img src="../../assets/diagram/eps_block_diagram.svg"/>
+<caption>EPS System diagram</caption>
+</figure>
+
+<p>The EPS consists of 4 + 1 Power inputs (4 For solar cells and 1 for USB) and 4 Power outputs for each subsystems in the Flatsat each attached with power voltage and current sensor for power monitoring and 2 Temperature Sensors for each battery as following table</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Part No.</th>
+<th style="text-align: left;">I2C Address</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sensor 1</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x40</td>
+<td style="text-align: left;">Solar Cell Input Channel 1 Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor 2</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x41</td>
+<td style="text-align: left;">Solar Cell Input Channel 2 Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor 3</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x42</td>
+<td style="text-align: left;">Solar Cell Input Channel 3 Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor 4</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x43</td>
+<td style="text-align: left;">Solar Cell Input Channel 4 Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor 5</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x47</td>
+<td style="text-align: left;">Battery Charging Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sensor 6</td>
+<td style="text-align: left;">INA226</td>
+<td style="text-align: left;">0x48</td>
+<td style="text-align: left;">Battery Discharging Voltage and Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output 1</td>
+<td style="text-align: left;">ADM1177</td>
+<td style="text-align: left;">0x58</td>
+<td style="text-align: left;">OBC Power Switch and Voltage/Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output 2</td>
+<td style="text-align: left;">ADM1177</td>
+<td style="text-align: left;">0x59</td>
+<td style="text-align: left;">Communication Power Switch and Voltage/Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output 3</td>
+<td style="text-align: left;">ADM1177</td>
+<td style="text-align: left;">0x5A</td>
+<td style="text-align: left;">Payload 1 Power Switch and Voltage/Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Output 4</td>
+<td style="text-align: left;">ADM1177</td>
+<td style="text-align: left;">0x5B</td>
+<td style="text-align: left;">Payload 2 Power Switch and Voltage/Current Monitor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Temp Sensor 1</td>
+<td style="text-align: left;">TMP102</td>
+<td style="text-align: left;">0x4A</td>
+<td style="text-align: left;">Battery 1 Temperature Sensor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Temp Sensor 2</td>
+<td style="text-align: left;">TMP102</td>
+<td style="text-align: left;">0x4B</td>
+<td style="text-align: left;">Battery 2 Temperature Sensor</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Output 2,3,4 are connected to OBC's Pin PD1,PD2,PD3 Respectively</p>
+<p>Output 1 cannot be turned off since it powers the OBC</p>
+</blockquote>
 <h2 id="technical-specifications">Technical Specifications</h2>
 <table>
 <thead>
