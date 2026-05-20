@@ -39,6 +39,7 @@ The **EPS** is the hardware layer responsible for harvesting, storing, and distr
 
 #### 3. [Communication Subsystem (COM)](subsystems/communication.md)
 The **COM** module handles the wireless link between the FlatSat and the Ground Station, allowing for telecommands to be received and telemetry to be sent back to Earth.
+
 *   **Core MCU:** STM32F411RE.
 *   **Radio Module:** RFM98PW (433 MHz).
 *   **Key Functions:** Radio frequency modulation, KISS protocol implementation, and data packet handling.
@@ -54,7 +55,7 @@ The **Payload** represents the "mission" of the satellite, consisting of an imag
 #### 5. [Ground Segment (GS)](subsystems/ground-segment.md)
 The **Ground Segment** is the terrestrial hardware that allows users to interact with the FlatSat, mimicking a real-world satellite ground station.
 
-*   **Core MCU:** STM32F411RE.
+*   **Core MCU:** STM32F103RC.
 *   **Radio Module:** RFM98PW (433 MHz).
 *   **Key Functions:** Receiving satellite telemetry and transmitting control commands via a PC interface (USB-C).
 *   **[Technical Details & Example Code](./subsystems/ground-segment.md)**
