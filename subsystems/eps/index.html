@@ -741,14 +741,18 @@
 <li><strong>Charging Management:</strong> Integrated chargers (BQ25606) manage both USB-C and Solar charging paths efficiently.</li>
 </ul>
 <h3 id="2-intelligent-power-distribution">2. Intelligent Power Distribution</h3>
-<p>The EPS features <strong>three controllable primary output channels</strong>, each equipped with an <strong>ADM1177</strong> hot-swap controller and sensor. To ensure system stability, the channel that controls the OBC itself is intentionally omitted from the board, preventing the OBC from accidentally turning itself off. This allows the OBC to independently toggle power to the following subsystems using specific pins:
-1.  <strong>Communication Subsystem</strong> (Pin: <strong>PD1</strong>)
-2.  <strong>Payload 1</strong> / Camera (Pin: <strong>PD2</strong>)
-3.  <strong>Payload 2</strong> / Expansion/PC104 (Pin: <strong>PD3</strong>)</p>
+<p>The EPS features <strong>three controllable primary output channels</strong>, each equipped with an <strong>ADM1177</strong> hot-swap controller and sensor. To ensure system stability, the channel that controls the OBC itself is intentionally omitted from the board, preventing the OBC from accidentally turning itself off. This allows the OBC to independently toggle power to the following subsystems using specific pins:</p>
+<ol>
+<li><strong>Communication Subsystem</strong> (Pin: <strong>PD1</strong>)</li>
+<li><strong>Payload 1</strong> / Camera (Pin: <strong>PD2</strong>)</li>
+<li><strong>Payload 2</strong> / Expansion/PC104 (Pin: <strong>PD3</strong>)</li>
+</ol>
 <h3 id="3-hardware-testing-and-diagnostics">3. Hardware Testing and Diagnostics</h3>
-<p>For benchtop testing and debugging, the EPS board provides physical access points:
-*   <strong>Test Points:</strong> Dedicated test points are available to easily hook up oscilloscope probes for signal monitoring.
-*   <strong>Current Measurement:</strong> The board includes banana jacks. When the designated switch is pushed down, you can connect an external amp meter directly via these jacks to measure the current draw of the power bus.</p>
+<p>For benchtop testing and debugging, the EPS board provides physical access points:</p>
+<ul>
+<li><strong>Test Points:</strong> Dedicated test points are available to easily hook up oscilloscope probes for signal monitoring.</li>
+<li><strong>Current Measurement:</strong> The board includes banana jacks. When the designated switch is pushed down, you can connect an external amp meter directly via these jacks to measure the current draw of the power bus.</li>
+</ul>
 <h3 id="4-comprehensive-telemetry">4. Comprehensive Telemetry</h3>
 <p>The subsystem is densely populated with sensors to provide real-time health data:</p>
 <ul>
