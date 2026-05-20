@@ -791,11 +791,13 @@
 <li><strong><a href="subsystems/eps/">Technical Details &amp; Example Code</a></strong></li>
 </ul>
 <h4 id="3-communication-subsystem-com">3. <a href="subsystems/communication/">Communication Subsystem (COM)</a></h4>
-<p>The <strong>COM</strong> module handles the wireless link between the FlatSat and the Ground Station, allowing for telecommands to be received and telemetry to be sent back to Earth.
-*   <strong>Core MCU:</strong> STM32F411RE.
-*   <strong>Radio Module:</strong> RFM98PW (433 MHz).
-*   <strong>Key Functions:</strong> Radio frequency modulation, KISS protocol implementation, and data packet handling.
-*   <strong><a href="subsystems/communication/">Technical Details &amp; Example Code</a></strong></p>
+<p>The <strong>COM</strong> module handles the wireless link between the FlatSat and the Ground Station, allowing for telecommands to be received and telemetry to be sent back to Earth.</p>
+<ul>
+<li><strong>Core MCU:</strong> STM32F411RE.</li>
+<li><strong>Radio Module:</strong> RFM98PW (433 MHz).</li>
+<li><strong>Key Functions:</strong> Radio frequency modulation, KISS protocol implementation, and data packet handling.</li>
+<li><strong><a href="subsystems/communication/">Technical Details &amp; Example Code</a></strong></li>
+</ul>
 <h4 id="4-camera-payload">4. <a href="subsystems/payload/">Camera Payload</a></h4>
 <p>The <strong>Payload</strong> represents the "mission" of the satellite, consisting of an imaging system used to capture and process visual data.</p>
 <ul>
@@ -806,7 +808,7 @@
 <h4 id="5-ground-segment-gs">5. <a href="subsystems/ground-segment/">Ground Segment (GS)</a></h4>
 <p>The <strong>Ground Segment</strong> is the terrestrial hardware that allows users to interact with the FlatSat, mimicking a real-world satellite ground station.</p>
 <ul>
-<li><strong>Core MCU:</strong> STM32F411RE.</li>
+<li><strong>Core MCU:</strong> STM32F103RC.</li>
 <li><strong>Radio Module:</strong> RFM98PW (433 MHz).</li>
 <li><strong>Key Functions:</strong> Receiving satellite telemetry and transmitting control commands via a PC interface (USB-C).</li>
 <li><strong><a href="subsystems/ground-segment/">Technical Details &amp; Example Code</a></strong></li>
