@@ -7,18 +7,21 @@ A unique architectural feature of this kit is that the EPS is **centrally manage
 ## Key Capabilities and Features
 
 ### 1. Energy Harvesting and Storage
+
 *   **Battery Power:** Equipped with a **Li-ion 18650** battery pack providing at least **17 Wh** of energy.
 *   **Solar Input:** Supports up to four solar panel inputs, featuring a simulation system to mimic orbital sunlight conditions.
 *   **Charging Management:** Integrated chargers (BQ25606) manage both USB-C and Solar charging paths efficiently.
 
 ### 2. Intelligent Power Distribution
 The EPS features **three controllable primary output channels**, each equipped with an **ADM1177** hot-swap controller and sensor. To ensure system stability, the channel that controls the OBC itself is intentionally omitted from the board, preventing the OBC from accidentally turning itself off. This allows the OBC to independently toggle power to the following subsystems using specific pins:
+
 1.  **Communication Subsystem** (Pin: **PD1**)
 2.  **Payload 1** / Camera (Pin: **PD2**)
 3.  **Payload 2** / Expansion/PC104 (Pin: **PD3**)
 
 ### 3. Hardware Testing and Diagnostics
 For benchtop testing and debugging, the EPS board provides physical access points:
+
 *   **Test Points:** Dedicated test points are available to easily hook up oscilloscope probes for signal monitoring.
 *   **Current Measurement:** The board includes banana jacks. When the designated switch is pushed down, you can connect an external amp meter directly via these jacks to measure the current draw of the power bus.
 
