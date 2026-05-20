@@ -762,15 +762,20 @@
 
 <h1 id="flatsat-satellite-learning-kit-overview">FlatSat Satellite Learning Kit: Overview</h1>
 <p>Welcome to the <strong>FlatSat Learning Kit</strong> documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.</p>
+<p>The kit is divided into two primary segments: the <strong>Space Segment</strong> (the FlatSat itself) and the <strong>Ground Segment</strong> (the station used to communicate with the satellite).</p>
+<figure>
+<img src="assets/flatsat_board.jpg"/>
+<caption>Flatsat Space Segment</caption>
+</figure>
+
+<hr />
+<h2 id="system-architecture">System Architecture</h2>
+<p>The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized <strong>PC104 Bus</strong>. A key feature of this design is its <strong>centralized control logic</strong>: while most subsystems have their own dedicated processors, the <strong>Electrical Power System (EPS)</strong> is controlled directly by the <strong>On-Board Computer (OBC)</strong> via a shared I2C bus.</p>
 <figure>
 <img src="assets/diagram/overall_system_diagram.svg"/>
 <caption>Flatsat Architecture</caption>
 </figure>
 
-<p>The kit is divided into two primary segments: the <strong>Space Segment</strong> (the FlatSat itself) and the <strong>Ground Segment</strong> (the station used to communicate with the satellite).</p>
-<hr />
-<h2 id="system-architecture">System Architecture</h2>
-<p>The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized <strong>PC104 Bus</strong>. A key feature of this design is its <strong>centralized control logic</strong>: while most subsystems have their own dedicated processors, the <strong>Electrical Power System (EPS)</strong> is controlled directly by the <strong>On-Board Computer (OBC)</strong> via a shared I2C bus.</p>
 <h3 id="key-subsystems">Key Subsystems</h3>
 <h4 id="1-on-board-computer-obc">1. <a href="subsystems/obc/">On-Board Computer (OBC)</a></h4>
 <p>The <strong>OBC</strong> serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it also acts as the controller for the EPS hardware.</p>
@@ -827,7 +832,7 @@
 <p>Through this documentation and the associated hardware, you will learn:</p>
 <ul>
 <li><strong>Unified System Control:</strong> Managing multiple hardware subsystems (OBC and EPS) from a single powerful microcontroller.</li>
-<li><strong>Embedded Programming:</strong> Developing for STM32 microcontrollers in a space-system context.</li>
+<li><strong>Embedded Programming:</strong> Firmeare developing for STM32 microcontrollers in a space-system context.</li>
 <li><strong>Communication Protocols:</strong> Implementing UART, I2C, SPI, and CAN bus for inter-subsystem and sensor communication.</li>
 <li><strong>Power Management:</strong> Directly monitoring energy consumption and managing battery cycles through I2C sensor integration.</li>
 <li><strong>RF Communications:</strong> Understanding 433MHz radio links and packet protocols like KISS.</li>
