@@ -20,6 +20,7 @@ theme:
         name: Switch to light mode
 # repo_url: https://openfruit.space
 site_author: NBSpace
+site_url: https://flatsat.kidorbit.space
 nav:
   - Home: index.md
   - Subsystems:

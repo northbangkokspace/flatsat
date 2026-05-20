@@ -2,18 +2,24 @@
 
 Welcome to the **FlatSat Learning Kit** documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.
 
+The kit is divided into two primary segments: the **Space Segment** (the FlatSat itself) and the **Ground Segment** (the station used to communicate with the satellite).
+
 <figure>
-<img src="assets/diagram/overall_system_diagram.svg"/>
-<caption>Flatsat Architecture</caption>
+<img src="assets/flatsat_board.jpg"/>
+<caption>Flatsat Space Segment</caption>
 </figure>
 
-The kit is divided into two primary segments: the **Space Segment** (the FlatSat itself) and the **Ground Segment** (the station used to communicate with the satellite).
 
 ---
 
 ## System Architecture
 
 The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized **PC104 Bus**. A key feature of this design is its **centralized control logic**: while most subsystems have their own dedicated processors, the **Electrical Power System (EPS)** is controlled directly by the **On-Board Computer (OBC)** via a shared I2C bus.
+
+<figure>
+<img src="assets/diagram/overall_system_diagram.svg"/>
+<caption>Flatsat Architecture</caption>
+</figure>
 
 ### Key Subsystems
 
@@ -76,7 +82,7 @@ Each PC104 interface provides a comprehensive suite of power and data connection
 Through this documentation and the associated hardware, you will learn:
 
 *   **Unified System Control:** Managing multiple hardware subsystems (OBC and EPS) from a single powerful microcontroller.
-*   **Embedded Programming:** Developing for STM32 microcontrollers in a space-system context.
+*   **Embedded Programming:** Firmeare developing for STM32 microcontrollers in a space-system context.
 *   **Communication Protocols:** Implementing UART, I2C, SPI, and CAN bus for inter-subsystem and sensor communication.
 *   **Power Management:** Directly monitoring energy consumption and managing battery cycles through I2C sensor integration.
 *   **RF Communications:** Understanding 433MHz radio links and packet protocols like KISS.
