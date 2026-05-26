@@ -2,6 +2,11 @@
 
 The **Communication (COM) Subsystem** acts as the satellite's primary wireless link to the Earth. Its fundamental role is to receive telecommands from the Ground Station and transmit vital telemetry data back to users, ensuring the satellite remains under control throughout its mission. 
 
+<figure>
+<img src="../../assets/commu.png"/>
+<caption>Communication Block diagram</caption>
+</figure>
+
 This subsystem is powered by the **STM32F411RE** microcontroller, which manages a high-performance **RFM98PW** radio module for long-range data transmission.
 
 ## Key Capabilities and Features

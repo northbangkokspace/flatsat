@@ -1,17 +1,22 @@
-# Ground Segment (GS) Subsystem
+# Ground Station (GS) Subsystem
 
-The **Ground Segment (GS)** is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.
+The **Ground Station (GS)** is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.
+
+<figure>
+<img src="../../assets/gs.jpg"/>
+<caption>Ground Station</caption>
+</figure>
 
 ## System Overview
 
-The Ground Segment is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.
+The Ground Station is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.
 
 ### 1. Processing and Control
 *   **Microcontroller:** It is powered by the **STM32F103RC** MCU, which handles the complex tasks of modulating/demodulating radio signals and managing the serial interface with the user's computer.
 *   **Computer Interface:** A **USB-C** connection provides both power to the module and a high-speed data link (via ST-Link) for the operator to send commands and view real-time satellite data.
 
 ### 2. Wireless Communication
-*   **Radio Module:** Equipped with an **RFM98PW** radio module, the Ground Segment communicates on the **433 MHz** frequency band.
+*   **Radio Module:** Equipped with an **RFM98PW** radio module, the Ground Station communicates on the **433 MHz** frequency band.
 *   **Performance:** It is capable of a high transmit power of **27 dBm**, ensuring a strong link even in challenging environments.
 *   **Data Handling:** The system supports a data rate of **9.6 kbps**, optimized for reliable transmission of satellite telemetry packets.
 
@@ -25,27 +30,32 @@ The Ground Segment is built on a high-performance architecture designed for reli
 <caption>Ground Station Block diagram</caption>
 </figure>
 
+<figure>
+<img src="../../assets/gs_front.png"/>
+<caption>Ground Station Block diagram</caption>
+</figure>
+
 ---
 
 ## Technical Specifications
 
 | Feature | Specification |
 | :--- | :--- |
-| **Processor** | STM32F103RC (ARM Cortex-M4) |
+| **Processor** | STM32F103RC (ARM Cortex-M3) |
 | **Radio Frequency** | 433 MHz |
 | **Transmit Power** | 27 dBm |
 | **Data Rate** | 9.6 kbps |
 | **PC Connection** | USB-C (UART via ST-Link) |
-| **Antenna** | Integrated and External connector support |
+| **Antenna** | SMA Antenna connector support |
 
 ---
 
 ## Example Code
 
-The following code provides a complete setup for the Ground Segment, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.
+The following code provides a complete setup for the Ground Station, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.
 
 | Feature | Description | Code Link |
 | :--- | :--- | :--- |
-| **GS TX/RX** | Initialize the Ground Segment radio and perform basic transmit/receive operations. | [gs_tx_rx.ino](../codes/gs/gs_tx_rx/gs_tx_rx.ino) |
+| **GS TX/RX** | Initialize the Ground Station radio and perform basic transmit/receive operations. | [gs_tx_rx.ino](../codes/gs/gs_tx_rx/gs_tx_rx.ino) |
 
-**User Note:** When deploying your Ground Segment, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.
+**User Note:** When deploying your Ground Station, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.

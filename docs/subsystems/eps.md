@@ -4,6 +4,11 @@ The **Electrical Power System (EPS)** is the vital heart of the FlatSat, respons
 
 A unique architectural feature of this kit is that the EPS is **centrally managed**. It does not have its own dedicated microcontroller; instead, the **On-Board Computer (OBC)** acts as the "brains" of the EPS, communicating with a network of sensors and switches via a dedicated I2C bus (SDA: PF0, SCL: PF1).
 
+<figure>
+<img src="../../assets/eps_on_board.jpg"/>
+<caption>EPS Subsystem</caption>
+</figure>
+
 ## Key Capabilities and Features
 
 ### 1. Energy Harvesting and Storage
@@ -16,7 +21,7 @@ A unique architectural feature of this kit is that the EPS is **centrally manage
 The EPS features **three controllable primary output channels**, each equipped with an **ADM1177** hot-swap controller and sensor. To ensure system stability, the channel that controls the OBC itself is intentionally omitted from the board, preventing the OBC from accidentally turning itself off. This allows the OBC to independently toggle power to the following subsystems using specific pins:
 
 1.  **Communication Subsystem** (Pin: **PD1**)
-2.  **Payload 1** / Camera (Pin: **PD2**)
+2.  **Payload 1** / GPS (Pin: **PD2**)
 3.  **Payload 2** / Expansion/PC104 (Pin: **PD3**)
 
 ### 3. Hardware Testing and Diagnostics

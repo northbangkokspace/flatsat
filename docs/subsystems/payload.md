@@ -48,5 +48,11 @@ The following example code demonstrates how to trigger a picture capture and sav
 | **Camera to SD** | Capture a 5MP image and save it as a JPEG file on the SD card. | [obc_camera2sd.ino](../codes/obc/obc_camera2sd/obc_camera2sd.ino) |
 
 ## PC104 Payload Expansion
-loream loream 
-## GPS Payload
+
+The payload could be expanded with PC104 header
+
+<figure>
+<img src="../../assets/payload_section.png"/>
+<caption>PC104 Payload Expansion</caption>
+</figure>
+<!-- ## GPS Payload -->

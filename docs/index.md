@@ -9,6 +9,11 @@ The kit is divided into two primary segments: the **Space Segment** (the FlatSat
 <caption>Flatsat Space Segment</caption>
 </figure>
 
+<figure>
+<img src="assets/gs.jpg"/>
+<caption>Flatsat Ground Segment</caption>
+</figure>
+
 
 ---
 

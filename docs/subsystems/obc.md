@@ -3,6 +3,11 @@
 The **On-Board Computer (OBC)** serves as the primary "brain" of the FlatSat satellite, responsible for coordinating mission logic, handling data, and managing communication between all other subsystems,,. It is built around the high-performance **STM32F429ZI** microcontroller, which provides the necessary processing power and peripheral connectivity for satellite operations.
 
 <figure>
+<img src="../../assets/obc_on_board.png"/>
+<caption>OBC Pinout diagram</caption>
+</figure>
+
+<figure>
 <img src="../../assets/diagram/obc_wiring_diagram.svg"/>
 <caption>OBC Pinout diagram</caption>
 </figure>
