@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://flatsat.kidorbit.space/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/environment_setup/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/subsystems/communication/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/subsystems/eps/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/subsystems/ground-segment/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/subsystems/obc/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
     <url>
          <loc>https://flatsat.kidorbit.space/subsystems/payload/</loc>
-         <lastmod>2026-05-20</lastmod>
+         <lastmod>2026-05-26</lastmod>
     </url>
 </urlset>

@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ground-segment-gs-subsystem" class="md-skip">
+        <a href="#ground-station-gs-subsystem" class="md-skip">
           Skip to content
         </a>
       
@@ -684,10 +684,15 @@
 
 
 
-<h1 id="ground-segment-gs-subsystem">Ground Segment (GS) Subsystem</h1>
-<p>The <strong>Ground Segment (GS)</strong> is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.</p>
+<h1 id="ground-station-gs-subsystem">Ground Station (GS) Subsystem</h1>
+<p>The <strong>Ground Station (GS)</strong> is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.</p>
+<figure>
+<img src="../../assets/gs.jpg"/>
+<caption>Ground Station</caption>
+</figure>
+
 <h2 id="system-overview">System Overview</h2>
-<p>The Ground Segment is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.</p>
+<p>The Ground Station is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.</p>
 <h3 id="1-processing-and-control">1. Processing and Control</h3>
 <ul>
 <li><strong>Microcontroller:</strong> It is powered by the <strong>STM32F103RC</strong> MCU, which handles the complex tasks of modulating/demodulating radio signals and managing the serial interface with the user's computer.</li>
@@ -695,7 +700,7 @@
 </ul>
 <h3 id="2-wireless-communication">2. Wireless Communication</h3>
 <ul>
-<li><strong>Radio Module:</strong> Equipped with an <strong>RFM98PW</strong> radio module, the Ground Segment communicates on the <strong>433 MHz</strong> frequency band.</li>
+<li><strong>Radio Module:</strong> Equipped with an <strong>RFM98PW</strong> radio module, the Ground Station communicates on the <strong>433 MHz</strong> frequency band.</li>
 <li><strong>Performance:</strong> It is capable of a high transmit power of <strong>27 dBm</strong>, ensuring a strong link even in challenging environments.</li>
 <li><strong>Data Handling:</strong> The system supports a data rate of <strong>9.6 kbps</strong>, optimized for reliable transmission of satellite telemetry packets.</li>
 </ul>
@@ -707,6 +712,11 @@
 </ul>
 <figure>
 <img src="../../assets/diagram/gs_block_diagram.svg"/>
+<caption>Ground Station Block diagram</caption>
+</figure>
+
+<figure>
+<img src="../../assets/gs_front.png"/>
 <caption>Ground Station Block diagram</caption>
 </figure>
 
@@ -722,7 +732,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Processor</strong></td>
-<td style="text-align: left;">STM32F103RC (ARM Cortex-M4)</td>
+<td style="text-align: left;">STM32F103RC (ARM Cortex-M3)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Radio Frequency</strong></td>
@@ -742,13 +752,13 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Antenna</strong></td>
-<td style="text-align: left;">Integrated and External connector support</td>
+<td style="text-align: left;">SMA Antenna connector support</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="example-code">Example Code</h2>
-<p>The following code provides a complete setup for the Ground Segment, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.</p>
+<p>The following code provides a complete setup for the Ground Station, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.</p>
 <table>
 <thead>
 <tr>
@@ -760,12 +770,12 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>GS TX/RX</strong></td>
-<td style="text-align: left;">Initialize the Ground Segment radio and perform basic transmit/receive operations.</td>
+<td style="text-align: left;">Initialize the Ground Station radio and perform basic transmit/receive operations.</td>
 <td style="text-align: left;"><a href="../../codes/gs/gs_tx_rx/gs_tx_rx.ino">gs_tx_rx.ino</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>User Note:</strong> When deploying your Ground Segment, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.</p>
+<p><strong>User Note:</strong> When deploying your Ground Station, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.</p>
 
 
 
