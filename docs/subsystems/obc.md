@@ -3,7 +3,29 @@
 The **On-Board Computer (OBC)** serves as the primary "brain" of the FlatSat satellite, responsible for coordinating mission logic, handling data, and managing communication between all other subsystems,,. It is built around the high-performance **STM32F429ZI** microcontroller, which provides the necessary processing power and peripheral connectivity for satellite operations.
 
 <figure>
-<img src="../../assets/obc_on_board.png"/>
+<!-- Full-Board Highlight -->
+<svg viewBox="0 0 6300 5400" width="100%" style="border-radius: 8px; margin-bottom: 1rem;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="obc-mask">
+      <rect width="6300" height="5400" fill="white" opacity="0.3" />
+      <rect x="4190" y="314" width="1920" height="2152" fill="white" rx="50" />
+    </mask>
+  </defs>
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" mask="url(#obc-mask)" />
+  <rect x="4190" y="314" width="1920" height="2152" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <text x="4190" y="280" fill="#00e5ff" font-size="200" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">OBC Location</text>
+</svg>
+
+<!-- Cropped Section with Labels -->
+<svg viewBox="3446 334 3270 2102" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" />
+  <!-- Highlights inside the crop -->
+  <rect x="5250" y="830" width="400" height="400" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="5250" y="800" fill="#ff007f" font-size="120" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">MCU (STM32F429ZI)</text>
+  
+  <rect x="5020" y="1140" width="80" height="80" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="4000" y="1100" fill="#ff007f" font-size="80" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">Temperature Sensor TMP102</text>
+</svg>
 <caption>OBC Pinout diagram</caption>
 </figure>
 

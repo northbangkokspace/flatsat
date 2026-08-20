@@ -5,7 +5,39 @@ The **Electrical Power System (EPS)** is the vital heart of the FlatSat, respons
 A unique architectural feature of this kit is that the EPS is **centrally managed**. It does not have its own dedicated microcontroller; instead, the **On-Board Computer (OBC)** acts as the "brains" of the EPS, communicating with a network of sensors and switches via a dedicated I2C bus (SDA: PF0, SCL: PF1).
 
 <figure>
-<img src="../../assets/eps_on_board.jpg"/>
+<!-- Full-Board Highlight -->
+<svg viewBox="0 0 6300 5400" width="100%" style="border-radius: 8px; margin-bottom: 1rem;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="eps-mask">
+      <rect width="6300" height="5400" fill="white" opacity="0.3" />
+      <!-- Top-Left: Solar & Battery -->
+      <rect x="100" y="100" width="4050" height="2350" fill="white" rx="50" />
+      <!-- Mid-Right: Power Distribution Unit (PDU) -->
+      <rect x="3990" y="2500" width="2150" height="1550" fill="white" rx="50" />
+      <!-- Bottom-Center: USB Power -->
+      <rect x="2000" y="4450" width="800" height="600" fill="white" rx="50" />
+    </mask>
+  </defs>
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" mask="url(#eps-mask)" />
+  
+  <!-- Highlight Outlines -->
+  <rect x="100" y="100" width="4050" height="2350" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <rect x="3990" y="2500" width="2150" height="1550" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <rect x="2000" y="4450" width="800" height="600" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+
+  <text x="150" y="350" fill="#00e5ff" font-size="250" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">EPS Location</text>
+</svg>
+
+<!-- EPS Specific View -->
+<svg viewBox="0 0 6300 5400" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" />
+  <!-- Highlights inside the crop -->
+  <rect x="2800" y="300" width="1330" height="2150" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="2500" y="250" fill="#ff007f" font-size="150" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">Li-ion Battery Pack</text>
+  
+  <rect x="3990" y="2500" width="2120" height="1550" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="3990" y="2450" fill="#ff007f" font-size="150" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">Power Distribution</text>
+</svg>
 <caption>EPS Subsystem</caption>
 </figure>
 
@@ -41,10 +73,86 @@ The subsystem is densely populated with sensors to provide real-time health data
 
 ### Components and Block diagram
 
-<figure>
-<img src="../../assets/diagram/eps_block_diagram.svg"/>
-<caption>EPS System diagram</caption>
-</figure>
+=== "Power Path"
+
+    ```mermaid
+    flowchart LR
+        subgraph Inputs ["Energy Harvesting"]
+            S1["Solar Ch 1<br/>(INA226 0x40)"]
+            S2["Solar Ch 2<br/>(INA226 0x41)"]
+            S3["Solar Ch 3<br/>(INA226 0x42)"]
+            S4["Solar Ch 4<br/>(INA226 0x43)"]
+            USB["USB-C Input"]
+        end
+
+        subgraph BMS ["Battery Management System"]
+            ChargeSense["Charge Monitor<br/>(INA226 0x47)"]
+            Bat(("Li-ion 18650 Battery<br/>Temperature Sensor<br/><b>(TMP102 0x4A, 0x4B)</b>"))
+            DischargeSense["Discharge Monitor<br/>(INA226 0x48)"]
+        end
+
+        subgraph PDU ["Power Distribution (ADM1177)"]
+            SW1["OBC Power (0x58)"]
+            SW2["Comm Power (0x59)"]
+            SW3["Payload 1 Power (0x5A)"]
+            SW4["Payload 2 Power (0x5B)"]
+        end
+
+        %% Power Flow
+        S1 --> ChargeSense
+        S2 --> ChargeSense
+        S3 --> ChargeSense
+        S4 --> ChargeSense
+        USB --> ChargeSense
+        
+        ChargeSense --> Bat
+        Bat --> DischargeSense
+        
+        DischargeSense --> SW1
+        DischargeSense --> SW2
+        DischargeSense --> SW3
+        DischargeSense --> SW4
+        
+        SW1 ==> OutOBC["OBC<br/>(Always On)"]
+        SW2 ==> OutComm["Communication<br/>(PD1)"]
+        SW3 ==> OutPL1["Payload 1<br/>(PD2)"]
+        SW4 ==> OutPL2["Payload 2<br/>(PD3)"]
+    ```
+
+=== "I2C Path"
+
+    ```mermaid
+    flowchart LR
+        OutOBC["OBC (I2C Master)"]
+
+        subgraph Inputs ["Energy Harvesting"]
+            direction TB
+            S1["Solar Ch 1 (0x40)"]
+            S2["Solar Ch 2 (0x41)"]
+            S3["Solar Ch 3 (0x42)"]
+            S4["Solar Ch 4 (0x43)"]
+        end
+
+        subgraph BMS ["Battery Management System"]
+            direction TB
+            ChargeSense["Charge Monitor (0x47)"]
+            Bat(("Temperature Sensors<br/>(0x4A, 0x4B)"))
+            DischargeSense["Discharge Monitor (0x48)"]
+        end
+
+        subgraph PDU ["Power Distribution Unit"]
+            direction TB
+            SW1["OBC Power (0x58)"]
+            SW2["Comm Power (0x59)"]
+            SW3["Payload 1 Power (0x5A)"]
+            SW4["Payload 2 Power (0x5B)"]
+        end
+
+        %% I2C Communication
+        OutOBC -.->|SDA: PF0, SCL: PF1| Inputs
+        OutOBC -.->|SDA: PF0, SCL: PF1| BMS
+        OutOBC -.->|SDA: PF0, SCL: PF1| PDU
+    ```
 
 The EPS consists of 4 + 1 Power inputs (4 For solar cells and 1 for USB) and 4 Power outputs for each subsystems in the Flatsat each attached with power voltage and current sensor for power monitoring and 2 Temperature Sensors for each battery as following table
 

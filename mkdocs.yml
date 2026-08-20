@@ -21,6 +21,14 @@ theme:
 # repo_url: https://openfruit.space
 site_author: NBSpace
 site_url: https://flatsat.kidorbit.space
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
 nav:
   - Home: index.md
   - Subsystems:
@@ -29,3 +37,4 @@ nav:
       - Communication System (COMMS): subsystems/communication.md
       - Payload: subsystems/payload.md
       - Ground Station: subsystems/ground-segment.md
+  - Measurements: measurements_point.md

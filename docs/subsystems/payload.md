@@ -52,7 +52,28 @@ The following example code demonstrates how to trigger a picture capture and sav
 The payload could be expanded with PC104 header
 
 <figure>
-<img src="../../assets/payload_section.png"/>
+<!-- Full-Board Highlight -->
+<svg viewBox="0 0 6300 5400" width="100%" style="border-radius: 8px; margin-bottom: 1rem;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="payload-mask">
+      <rect width="6300" height="5400" fill="white" opacity="0.3" />
+      <rect x="135" y="2715" width="3604" height="1718" fill="white" rx="50" />
+    </mask>
+  </defs>
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" mask="url(#payload-mask)" />
+  <rect x="135" y="2715" width="3604" height="1718" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <text x="135" y="2600" fill="#00e5ff" font-size="200" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">Payload Expansion Location</text>
+</svg>
+
+<!-- Cropped Section with Labels -->
+<svg viewBox="135 2715 3604 1718" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" />
+  <!-- Highlights inside the crop -->
+
+  
+  <rect x="200" y="2820" width="3500" height="200" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="300" y="3150" fill="#ff007f" font-size="120" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">PC104 Expansion Headers</text>
+</svg>
 <caption>PC104 Payload Expansion</caption>
 </figure>
 <!-- ## GPS Payload -->

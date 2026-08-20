@@ -3,7 +3,26 @@
 The **Communication (COM) Subsystem** acts as the satellite's primary wireless link to the Earth. Its fundamental role is to receive telecommands from the Ground Station and transmit vital telemetry data back to users, ensuring the satellite remains under control throughout its mission. 
 
 <figure>
-<img src="../../assets/commu.png"/>
+<!-- Full-Board Highlight -->
+<svg viewBox="0 0 6300 5400" width="100%" style="border-radius: 8px; margin-bottom: 1rem;" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="comm-mask">
+      <rect width="6300" height="5400" fill="white" opacity="0.3" />
+      <rect x="3992" y="4071" width="1863" height="1077" fill="white" rx="50" />
+    </mask>
+  </defs>
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" mask="url(#comm-mask)" />
+  <rect x="3992" y="4071" width="1863" height="1077" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <text x="3992" y="4000" fill="#00e5ff" font-size="200" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">COM Location</text>
+</svg>
+
+<!-- Cropped Section with Labels -->
+<svg viewBox="3992 4071 1863 1077" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" xmlns="http://www.w3.org/2000/svg">
+  <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" />
+  <!-- Highlights inside the crop -->
+  <rect x="4890" y="4200" width="250" height="250" fill="none" stroke="#ff007f" stroke-width="15" rx="30" />
+  <text x="4800" y="4550" fill="#ff007f" font-size="100" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">MCU (STM32F411RE)</text>
+</svg>
 <caption>Communication Block diagram</caption>
 </figure>
 
