@@ -18,6 +18,7 @@
 #define PWR_PD1 PD1
 #define PWR_PD2 PD2
 #define PWR_PD3 PD3
+#define PWR_CAM PD4
 
 // Commu UART
 HardwareSerial commu_uart(PA1, PA0);
@@ -183,8 +184,9 @@ void testPowerControl() {
   pinMode(PWR_PD1, OUTPUT);
   pinMode(PWR_PD2, OUTPUT);
   pinMode(PWR_PD3, OUTPUT);
+  pinMode(PWR_CAM, OUTPUT);
 
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 3; i++) {
       digitalWrite(PWR_PD0, LOW);
       digitalWrite(PWR_PD1, LOW);
       digitalWrite(PWR_PD2, LOW);
@@ -197,6 +199,15 @@ void testPowerControl() {
       digitalWrite(PWR_PD1, HIGH);
       Serial.println("  -> Power control pins PD0-PD3 set HIGH.");
       delay(500);
+  }
+  for (int i = 0; i < 2;i++){
+    Serial.println("Set Camera Power Off.");
+    digitalWrite(PWR_CAM, LOW);
+    delay(1000);
+    Serial.println("Set Camera Power On.");
+    digitalWrite(PWR_CAM, HIGH);
+    delay(1000);
+
   }
 }
 

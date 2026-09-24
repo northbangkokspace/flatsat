@@ -1,244 +1,121 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-        <meta name="author" content="NBSpace">
-      
-      
-        <link rel="canonical" href="https://flatsat.kidorbit.space/subsystems/ground-segment/">
-      
-      
-        <link rel="prev" href="../payload/">
-      
-      
-      
-        
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
-    
-    
-      
-        <title>Ground Station - Flatsat Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#ground-station-gs-subsystem" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="NBSpace" name="author"/>
+<link href="https://flatsat.kidorbit.space/subsystems/ground-segment/" rel="canonical"/>
+<link href="../payload/" rel="prev"/>
+<link href="../../measurements_point/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Ground Station - Flatsat Documentation</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/mkdocs_d2_plugin.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ground-station-gs-subsystem">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Flatsat Documentation" class="md-header__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
-      
-  <img src="../../assets/nb_logo_w.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Flatsat Documentation" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Flatsat Documentation">
+<img alt="logo" src="../../assets/nb_logo_w.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             Flatsat Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Ground Station
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-      
-    
-    
-  </nav>
-  
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Flatsat Documentation" class="md-nav__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
-      
-  <img src="../../assets/nb_logo_w.png" alt="logo">
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Flatsat Documentation" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Flatsat Documentation">
+<img alt="logo" src="../../assets/nb_logo_w.png"/>
+</a>
     Flatsat Documentation
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
     
   
     Home
@@ -246,39 +123,12 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
     
   
     Subsystems
@@ -286,35 +136,21 @@
 
     
   </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             
   
     Subsystems
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../obc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../obc/">
+<span class="md-ellipsis">
     
   
     On-board Computer (OBC)
@@ -322,27 +158,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../eps/">
+<span class="md-ellipsis">
     
   
     Electrical Power System (EPS)
@@ -350,27 +170,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../communication/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../communication/">
+<span class="md-ellipsis">
     
   
     Communication System (COMMS)
@@ -378,27 +182,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../payload/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../payload/">
+<span class="md-ellipsis">
     
   
     Payload
@@ -406,36 +194,12 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     
   
     Ground Station
@@ -443,17 +207,10 @@
 
     
   </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
     
   
     Ground Station
@@ -461,236 +218,174 @@
 
     
   </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-overview" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-overview">
+<span class="md-ellipsis">
       
         System Overview
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-processing-and-control" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="System Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-processing-and-control">
+<span class="md-ellipsis">
       
         1. Processing and Control
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-wireless-communication" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-wireless-communication">
+<span class="md-ellipsis">
       
         2. Wireless Communication
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hardware-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-hardware-connectivity">
+<span class="md-ellipsis">
       
         3. Hardware Connectivity
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
       
         Technical Specifications
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-code">
+<span class="md-ellipsis">
       
         Example Code
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../measurements_point/">
+<span class="md-ellipsis">
+    
   
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
+    Measurements
   
 
     
-  </ul>
+  </span>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-overview" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-overview">
+<span class="md-ellipsis">
       
         System Overview
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-processing-and-control" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="System Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-processing-and-control">
+<span class="md-ellipsis">
       
         1. Processing and Control
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-wireless-communication" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-wireless-communication">
+<span class="md-ellipsis">
       
         2. Wireless Communication
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hardware-connectivity" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-hardware-connectivity">
+<span class="md-ellipsis">
       
         3. Hardware Connectivity
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
       
         Technical Specifications
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-code">
+<span class="md-ellipsis">
       
         Example Code
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="ground-station-gs-subsystem">Ground Station (GS) Subsystem</h1>
 <p>The <strong>Ground Station (GS)</strong> is the terrestrial component of the FlatSat Learning Kit, acting as the bridge between the satellite and the operator. Its primary role is to mimic a real-world satellite ground station by receiving telemetry from the FlatSat and transmitting telecommands to control its mission.</p>
 <figure>
 <img src="../../assets/gs.jpg"/>
 <caption>Ground Station</caption>
 </figure>
-
 <h2 id="system-overview">System Overview</h2>
 <p>The Ground Station is built on a high-performance architecture designed for reliable long-range communication and seamless computer integration.</p>
 <h3 id="1-processing-and-control">1. Processing and Control</h3>
@@ -712,15 +407,14 @@
 </ul>
 <figure>
 <img src="../../assets/diagram/gs_block_diagram.svg"/>
+<div class="mxgraph" data-mxgraph='{"toolbar-position": "bottom", "toolbar-nohide": "0", "tooltips": "1", "border": 5, "resize": "1", "edit": "_blank", "lightbox": "1", "toolbar": "pages tags zoom layers lightbox", "xml": "&lt;mxfile host=\"Electron\" agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36\" pages=\"9\"&gt;&lt;diagram id=\"8SbKUrli6dvO4w_D-xoE\" name=\"GS\"&gt;\n    &lt;mxGraphModel dx=\"1338\" dy=\"886\" grid=\"1\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" page=\"1\" pageScale=\"1\" pageWidth=\"1169\" pageHeight=\"827\" math=\"0\" shadow=\"0\"&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\"0\"/&gt;\n        &lt;mxCell id=\"1\" parent=\"0\"/&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-36\" parent=\"1\" style=\"swimlane;startSize=20;swimlaneFillColor=default;rounded=1;strokeColor=default;fillColor=default;arcSize=18;swimlaneLine=0;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"250\" width=\"200\" x=\"500\" y=\"240\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-37\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;fontStyle=1\" value=\"GS MCU&amp;#10;STM32F103RC\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"35\" width=\"80\" x=\"59.5\" y=\"46.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-38\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"35.5\" x=\"1\" y=\"46.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-39\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"35.5\" x=\"1\" y=\"57\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-40\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"35.5\" x=\"1\" y=\"66.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-41\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#3399FF;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"63.5\" x=\"1\" y=\"30.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-42\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#3399FF;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"63.5\" x=\"1\" y=\"20.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-43\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PC11 / RX\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"10\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-44\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PC10 / TX\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"10\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-45\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PA14\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"46\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-46\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PA13\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"56.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-47\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"RST\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"66\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-48\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#B266FF;strokeColor=none;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"72\" x=\"127\" y=\"98\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-49\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#B266FF;strokeColor=none;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"72\" x=\"127\" y=\"108\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-50\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#B266FF;strokeColor=none;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"72\" x=\"127\" y=\"118\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-51\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#B266FF;strokeColor=none;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"72\" x=\"127\" y=\"128\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-52\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PB6 / CS\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"139.5\" y=\"97\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-53\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PA7 / MOSI\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"139.5\" y=\"107\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-54\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PA6 / MISO\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"139.5\" y=\"117\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-55\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PA5 / CLK\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"139.5\" y=\"127\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-56\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PA10\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"147\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-57\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PA9\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"157\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-58\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PA8\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"167\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-59\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PC7\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"197\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-60\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PC1\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"187\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-61\" parent=\"7-Bm4vEtU8D7KsEcmeTo-36\" style=\"text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1\" value=\"PC0\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"50\" x=\"149\" y=\"177\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-1\" parent=\"1\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"87.5\" x=\"501\" y=\"449\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-2\" parent=\"1\" style=\"swimlane;startSize=10;rounded=1;swimlaneLine=0;fillColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"131\" width=\"130\" x=\"740\" y=\"327.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-3\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"60.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-4\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"70\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-5\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"80\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-6\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"90\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-7\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"100\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-8\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"110\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-9\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-10\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-11\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"40\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-12\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#B266FF;strokeColor=#FFFFFF;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"39\" x=\"1\" y=\"10\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-13\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;fontStyle=1;fontColor=#4D4D4D;\" value=\"Radio Module&amp;#10;RFM98PW\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"35\" width=\"80\" x=\"40\" y=\"47.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-14\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=1;startArrow=classic;startFill=1;endFill=0;curved=0;strokeWidth=1;flowAnimation=0;shadow=0;linecap=round;linejoin=round;comic=0;orthogonal=1;orthogonalLoop=0;ignoreEdge=0;snapToPoint=0;noJump=1;jumpStyle=arc;startSize=6;endSize=6;jumpSize=6;flowAnimationDirection=reverse;flowAnimationTimingFunction=linear;sourcePortConstraint=east;targetPortConstraint=west;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"15\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-15\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=9;fontColor=#FFFFFF;fontStyle=1\" value=\"NSS\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"10\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-16\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"MOSI\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-17\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"MISO\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-18\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"SCK\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"40\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-19\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"D0\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"60\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-20\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"D1\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"70\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-21\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"D2\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"80\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-22\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"D3\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"90\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-23\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"D4\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"100\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-24\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;startArrow=classic;startFill=1;endFill=0;linecap=round;linejoin=round;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"25\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"25\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-25\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=classic;rounded=0;linejoin=round;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"35\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"35\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-26\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;startArrow=classic;startFill=1;endFill=0;linejoin=round;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"45\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"45\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-27\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"65\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"65\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-28\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"75\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"75\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-29\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"85\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"85\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-30\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"95\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"95\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-31\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"105\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"105\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-32\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"endArrow=none;rounded=0;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry height=\"50\" relative=\"1\" width=\"50\" as=\"geometry\"&gt;\n            &lt;mxPoint y=\"115\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-40\" y=\"115\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-33\" parent=\"7-Bm4vEtU8D7KsEcmeTo-2\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"RST\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"10\" y=\"110\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-34\" edge=\"1\" parent=\"1\" source=\"7-Bm4vEtU8D7KsEcmeTo-35\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" target=\"7-Bm4vEtU8D7KsEcmeTo-2\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-35\" parent=\"1\" style=\"verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_2;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"20\" x=\"950\" y=\"297.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-62\" parent=\"1\" style=\"swimlane;startSize=10;fillColor=#333333;rounded=1;swimlaneLine=0;fontFamily=Roboto Mono;fontStyle=1;swimlaneFillColor=#333333;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"80\" x=\"260\" y=\"250\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-63\" parent=\"7-Bm4vEtU8D7KsEcmeTo-62\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;fontSize=11;align=left;fontStyle=1;fontColor=#FFFFFF;\" value=\"USB C\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"25\" width=\"40\" x=\"10\" y=\"7.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-64\" parent=\"7-Bm4vEtU8D7KsEcmeTo-62\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontStyle=1;fontColor=#FFFFFF;\" value=\"D+\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"40\" y=\"10\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-65\" parent=\"7-Bm4vEtU8D7KsEcmeTo-62\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontStyle=1;fontColor=#FFFFFF;\" value=\"D-\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"40\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-66\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-62\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=classic;startFill=1;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"80\" y=\"15\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"130\" y=\"15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-67\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-62\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=classic;startFill=1;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"80\" y=\"25\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"130\" y=\"25\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-68\" parent=\"1\" style=\"swimlane;startSize=10;fillColor=#FFFFFF;rounded=1;swimlaneLine=0;fontFamily=Roboto Mono;fontStyle=1;swimlaneFillColor=#FFFFFF;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"96\" width=\"70\" x=\"390\" y=\"240\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-69\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#3399FF;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"39\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-70\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#3399FF;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"39\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-71\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;fontSize=10;align=center;fontStyle=1\" value=\"ST-Link\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"12.5\" width=\"65\" x=\"5\" y=\"3\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-72\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"TX\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"20\" x=\"40\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-73\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontColor=#FFFFFF;fontStyle=1\" value=\"RX\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"20\" x=\"40\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-74\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=none;startFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"70\" y=\"25\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"110\" y=\"25\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-75\" edge=\"1\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=classic;startFill=1;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"70\" y=\"35\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"110\" y=\"35\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-76\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontStyle=1\" value=\"D-\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"20\" x=\"10\" y=\"30\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-77\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=left;fontSize=8;fontStyle=1\" value=\"D+\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"20\" x=\"10\" y=\"20\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-78\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"41\" x=\"28\" y=\"66\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-79\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"41\" x=\"28\" y=\"46\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-80\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=.15;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"41\" x=\"28\" y=\"56\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-81\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontStyle=1;fontColor=#FFFFFF;\" value=\"SWCLK\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"30\" y=\"46\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-82\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontStyle=1;fontColor=#FFFFFF;\" value=\"SWDIO\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"30\" y=\"56\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-83\" parent=\"7-Bm4vEtU8D7KsEcmeTo-68\" style=\"whiteSpace=wrap;fontFamily=Roboto Mono;strokeColor=none;fillColor=none;align=right;fontSize=8;fontStyle=1;fontColor=#FFFFFF;\" value=\"nRST\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"30\" x=\"30\" y=\"66\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-84\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=none;startFill=0;fontFamily=Roboto Mono;fontStyle=1;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"460\" y=\"291\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"500\" y=\"291\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-85\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=none;startFill=0;fontFamily=Roboto Mono;fontStyle=1;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"460\" y=\"301\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"500\" y=\"301\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-86\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;rounded=0;linejoin=round;startArrow=none;startFill=0;fontFamily=Roboto Mono;fontStyle=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;\" target=\"7-Bm4vEtU8D7KsEcmeTo-40\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"460\" y=\"311\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"520\" y=\"306\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-87\" parent=\"1\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"76.5\" x=\"501\" y=\"380\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-88\" parent=\"1\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"87.5\" x=\"501\" y=\"419\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-89\" parent=\"1\" style=\"shape=singleArrow;whiteSpace=wrap;arrowWidth=1;arrowSize=0;fillColor=#4D4D4D;strokeColor=#FFFFFF;rotation=-180;strokeOpacity=100;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"9\" width=\"76.5\" x=\"501\" y=\"349.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-90\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PH0 / OSC_IN\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"60\" x=\"510\" y=\"349\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-91\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PH1 / OSC_OUT\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"70\" x=\"510\" y=\"379\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-92\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PC14 / OSC32_IN\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"75\" x=\"505\" y=\"418\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-93\" edge=\"1\" parent=\"1\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"457\" y=\"350\"/&gt;\n              &lt;mxPoint x=\"500\" y=\"350\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"457.51543209876536\" y=\"351.5\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"500\" y=\"353\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-94\" edge=\"1\" parent=\"1\" source=\"7-Bm4vEtU8D7KsEcmeTo-95\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"458\" y=\"390\"/&gt;\n              &lt;mxPoint x=\"500\" y=\"390\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"500\" y=\"393\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-95\" parent=\"1\" style=\"pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.electrical.miscellaneous.crystal_1;rotation=-90;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"14\" width=\"35\" x=\"440\" y=\"362\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-96\" parent=\"1\" style=\"text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Roboto Mono;fontStyle=1\" value=\"HSE&amp;#10;16MHz\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"50\" x=\"400\" y=\"349\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-97\" edge=\"1\" parent=\"1\" source=\"7-Bm4vEtU8D7KsEcmeTo-99\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"458\" y=\"416\"/&gt;\n              &lt;mxPoint x=\"500\" y=\"416\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"500\" y=\"413\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-98\" edge=\"1\" parent=\"1\" source=\"7-Bm4vEtU8D7KsEcmeTo-99\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;fontFamily=Roboto Mono;fontStyle=1\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"458\" y=\"459\"/&gt;\n              &lt;mxPoint x=\"500\" y=\"459\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"500\" y=\"459\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-99\" parent=\"1\" style=\"pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;verticalAlign=top;shape=mxgraph.electrical.miscellaneous.crystal_1;rotation=-90;fontFamily=Roboto Mono;fontStyle=1\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"14\" width=\"35\" x=\"440\" y=\"430\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-100\" parent=\"1\" style=\"text;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Roboto Mono;fontStyle=1\" value=\"LSE&amp;#10;32.768kHz\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"80\" x=\"385\" y=\"423\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"7-Bm4vEtU8D7KsEcmeTo-101\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;\" value=\"PC15 / OSC32_OUT\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"10\" width=\"87.5\" x=\"502.5\" y=\"448.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-1\" parent=\"1\" style=\"whiteSpace=wrap;fillColor=#3399FF;strokeColor=none;fontFamily=Roboto Mono;rounded=1;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"210\" y=\"525\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-2\" parent=\"1\" style=\"whiteSpace=wrap;fillColor=#CCCC00;strokeColor=none;fontFamily=Roboto Mono;rounded=1;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"210\" y=\"555\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-3\" parent=\"1\" style=\"whiteSpace=wrap;fillColor=#4D4D4D;strokeColor=none;fontFamily=Roboto Mono;rounded=1;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"210\" y=\"585\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-4\" parent=\"1\" style=\"whiteSpace=wrap;fillColor=light-dark(#A766E9,#A766E9);strokeColor=none;fontFamily=Roboto Mono;rounded=1;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"210\" y=\"495\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-5\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Roboto Mono;fontStyle=1\" value=\"SPI\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"50\" x=\"240\" y=\"490\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-6\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Roboto Mono;fontStyle=1\" value=\"UART\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"50\" x=\"240\" y=\"520\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-7\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Roboto Mono;fontStyle=1\" value=\"I2C\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"50\" x=\"240\" y=\"550\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"g1fSOdc2ZuUpqLhR2hhI-8\" parent=\"1\" style=\"text;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Roboto Mono;fontStyle=1\" value=\"Other\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"60\" x=\"240\" y=\"580\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n  &lt;/mxfile&gt;"}' style="max-width:100%;border:1px solid transparent;"></div>
 <caption>Ground Station Block diagram</caption>
 </figure>
-
 <figure>
 <img src="../../assets/gs_front.png"/>
 <caption>Ground Station Block diagram</caption>
 </figure>
-
-<hr />
+<hr/>
 <h2 id="technical-specifications">Technical Specifications</h2>
 <table>
 <thead>
@@ -756,7 +450,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr/>
 <h2 id="example-code">Example Code</h2>
 <p>The following code provides a complete setup for the Ground Station, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.</p>
 <table>
@@ -776,60 +470,30 @@
 </tbody>
 </table>
 <p><strong>User Note:</strong> When deploying your Ground Station, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script></body>
 </html>

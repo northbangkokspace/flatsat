@@ -1,253 +1,121 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-        <meta name="author" content="NBSpace">
-      
-      
-        <link rel="canonical" href="https://flatsat.kidorbit.space/">
-      
-      
-      
-        <link rel="next" href="subsystems/obc/">
-      
-      
-        
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
-    
-    
-      
-        <title>Flatsat Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="stylesheets/extra.css">
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#flatsat-satellite-learning-kit-overview" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="NBSpace" name="author"/>
+<link href="https://flatsat.kidorbit.space/" rel="canonical"/>
+<link href="subsystems/obc/" rel="next"/>
+<link href="assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Flatsat Documentation</title>
+<link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+<link href="stylesheets/extra.css" rel="stylesheet"/>
+<link href="assets/stylesheets/mkdocs_d2_plugin.css" rel="stylesheet"/>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#flatsat-satellite-learning-kit-overview">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Flatsat Documentation" class="md-header__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
-      
-  <img src="assets/nb_logo_w.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Flatsat Documentation" class="md-header__button md-logo" data-md-component="logo" href="." title="Flatsat Documentation">
+<img alt="logo" src="assets/nb_logo_w.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             Flatsat Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               Home
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-      
-    
-    
-  </nav>
-  
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Flatsat Documentation" class="md-nav__button md-logo" aria-label="Flatsat Documentation" data-md-component="logo">
-      
-  <img src="assets/nb_logo_w.png" alt="logo">
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Flatsat Documentation" class="md-nav__button md-logo" data-md-component="logo" href="." title="Flatsat Documentation">
+<img alt="logo" src="assets/nb_logo_w.png"/>
+</a>
     Flatsat Documentation
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     
   
     Home
@@ -255,17 +123,10 @@
 
     
   </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href=".">
+<span class="md-ellipsis">
     
   
     Home
@@ -273,168 +134,109 @@
 
     
   </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-architecture">
+<span class="md-ellipsis">
       
         System Architecture
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-subsystems" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="System Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-subsystems">
+<span class="md-ellipsis">
       
         Key Subsystems
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Subsystems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-board-computer-obc" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Key Subsystems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-on-board-computer-obc">
+<span class="md-ellipsis">
       
         1. On-Board Computer (OBC)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-electrical-power-system-eps" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-electrical-power-system-eps">
+<span class="md-ellipsis">
       
         2. Electrical Power System (EPS)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-communication-subsystem-com" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-communication-subsystem-com">
+<span class="md-ellipsis">
       
         3. Communication Subsystem (COM)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#4-camera-payload" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-camera-payload">
+<span class="md-ellipsis">
       
         4. Camera Payload
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#5-ground-segment-gs" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-ground-segment-gs">
+<span class="md-ellipsis">
       
         5. Ground Segment (GS)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#the-pc104-expansion-bus" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-pc104-expansion-bus">
+<span class="md-ellipsis">
       
         The PC104 Expansion Bus
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-objectives">
+<span class="md-ellipsis">
       
         Learning Objectives
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
     
   
     Subsystems
@@ -442,35 +244,21 @@
 
     
   </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             
   
     Subsystems
   
 
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="subsystems/obc/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="subsystems/obc/">
+<span class="md-ellipsis">
     
   
     On-board Computer (OBC)
@@ -478,27 +266,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="subsystems/eps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="subsystems/eps/">
+<span class="md-ellipsis">
     
   
     Electrical Power System (EPS)
@@ -506,27 +278,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="subsystems/communication/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="subsystems/communication/">
+<span class="md-ellipsis">
     
   
     Communication System (COMMS)
@@ -534,27 +290,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="subsystems/payload/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="subsystems/payload/">
+<span class="md-ellipsis">
     
   
     Payload
@@ -562,27 +302,11 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="subsystems/ground-segment/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="subsystems/ground-segment/">
+<span class="md-ellipsis">
     
   
     Ground Station
@@ -590,176 +314,133 @@
 
     
   </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="measurements_point/">
+<span class="md-ellipsis">
     
   
+    Measurements
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-architecture">
+<span class="md-ellipsis">
       
         System Architecture
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="System Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-subsystems" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="System Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-subsystems">
+<span class="md-ellipsis">
       
         Key Subsystems
       
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Subsystems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-on-board-computer-obc" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Key Subsystems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-on-board-computer-obc">
+<span class="md-ellipsis">
       
         1. On-Board Computer (OBC)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-electrical-power-system-eps" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-electrical-power-system-eps">
+<span class="md-ellipsis">
       
         2. Electrical Power System (EPS)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-communication-subsystem-com" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-communication-subsystem-com">
+<span class="md-ellipsis">
       
         3. Communication Subsystem (COM)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#4-camera-payload" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-camera-payload">
+<span class="md-ellipsis">
       
         4. Camera Payload
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#5-ground-segment-gs" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-ground-segment-gs">
+<span class="md-ellipsis">
       
         5. Ground Segment (GS)
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#the-pc104-expansion-bus" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-pc104-expansion-bus">
+<span class="md-ellipsis">
       
         The PC104 Expansion Bus
       
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#learning-objectives">
+<span class="md-ellipsis">
       
         Learning Objectives
       
     </span>
-  </a>
-  
+</a>
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="flatsat-satellite-learning-kit-overview">FlatSat Satellite Learning Kit: Overview</h1>
 <p>Welcome to the <strong>FlatSat Learning Kit</strong> documentation. This kit is a comprehensive educational platform designed to provide a hands-on understanding of satellite engineering. By laying out the core components of a CubeSat on a flat, accessible plane, students and engineers can easily study, program, and test the fundamental systems that make up a modern small satellite.</p>
 <p>The kit is divided into two primary segments: the <strong>Space Segment</strong> (the FlatSat itself) and the <strong>Ground Segment</strong> (the station used to communicate with the satellite).</p>
@@ -767,20 +448,17 @@
 <img src="assets/flatsat_board.jpg"/>
 <caption>Flatsat Space Segment</caption>
 </figure>
-
 <figure>
 <img src="assets/gs.jpg"/>
 <caption>Flatsat Ground Segment</caption>
 </figure>
-
-<hr />
+<hr/>
 <h2 id="system-architecture">System Architecture</h2>
 <p>The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized <strong>PC104 Bus</strong>. A key feature of this design is its <strong>centralized control logic</strong>: while most subsystems have their own dedicated processors, the <strong>Electrical Power System (EPS)</strong> is controlled directly by the <strong>On-Board Computer (OBC)</strong> via a shared I2C bus.</p>
 <figure>
-<img src="assets/diagram/overall_system_diagram.svg"/>
+<div class="mxgraph" data-mxgraph='{"toolbar-position": "bottom", "toolbar-nohide": "0", "tooltips": "1", "border": 5, "resize": "1", "edit": "_blank", "lightbox": "1", "toolbar": "pages tags zoom layers lightbox", "xml": "&lt;mxfile host=\"Electron\" agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36\" pages=\"9\"&gt;&lt;diagram id=\"KGZva1e_fxjm7-nqKRUJ\" name=\"Overview\"&gt;\n    &lt;mxGraphModel dx=\"3542\" dy=\"-30\" grid=\"1\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" page=\"1\" pageScale=\"1\" pageWidth=\"1169\" pageHeight=\"827\" math=\"0\" shadow=\"0\"&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\"0\"/&gt;\n        &lt;mxCell id=\"1\" parent=\"0\"/&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-1\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-2\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;strokeColor=light-dark(#3399ff, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-5\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-2\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Inter;\" value=\"&amp;lt;a href=&amp;quot;data:page/id,sf97ir_PnUdC6uudl9RP&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;color: rgb(0, 0, 0);&amp;quot;&amp;gt;OBC&amp;lt;/font&amp;gt;&amp;lt;/a&amp;gt;\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"80\" width=\"90\" x=\"-2060\" y=\"1160\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-3\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Inter;\" value=\"&amp;lt;a href=&amp;quot;data:page/id,x3vgjiO2L0nuP__QC7F5&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;color: rgb(0, 0, 0);&amp;quot;&amp;gt;EPS&amp;lt;/font&amp;gt;&amp;lt;/a&amp;gt;\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"80\" width=\"90\" x=\"-2060\" y=\"1330\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-4\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Inter;\" value=\"&amp;lt;a href=&amp;quot;data:page/id,94CDvW6OmQgxfHeE1Umg&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;color: rgb(0, 0, 0);&amp;quot;&amp;gt;Payload&amp;lt;/font&amp;gt;&amp;lt;/a&amp;gt;\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"80\" width=\"110\" x=\"-2260\" y=\"1160\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-5\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Inter;\" value=\"Communication\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"80\" width=\"190\" x=\"-1920\" y=\"1160\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-6\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=24;fontFamily=Inter;\" value=\"Ground Station\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"160\" width=\"200\" x=\"-1410\" y=\"1160\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-7\" parent=\"1\" style=\"verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_2;fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"70\" width=\"40\" x=\"-1845\" y=\"1090\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-8\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-5\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-7\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"-1825\" y=\"1145\"/&gt;\n              &lt;mxPoint x=\"-1825\" y=\"1145\"/&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-9\" parent=\"1\" style=\"verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_2;fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"70\" width=\"40\" x=\"-1500\" y=\"1120\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-10\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-6\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-9\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;mxPoint x=\"-1540\" y=\"1250\" as=\"sourcePoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-11\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-13\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;strokeColor=light-dark(#cccc02, #32b532);entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;linejoin=round;linecap=round;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-2\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"-2015\" y=\"1290\"/&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-12\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-27\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;strokeColor=light-dark(#cccc02, #32b532);strokeWidth=2;linejoin=round;linecap=round;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-5\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-13\" parent=\"1\" style=\"shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=light-dark(#cccc02, #32b532);strokeWidth=2;linejoin=round;linecap=round;fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"-2025\" y=\"1280\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-14\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-3\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.484;entryY=0.814;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;curved=0;strokeColor=light-dark(#cccc02, #32b532);exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeWidth=2;linejoin=round;linecap=round;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-13\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-15\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-4\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;strokeColor=light-dark(#b266ff, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;fontFamily=Inter;exitX=1;exitY=0.5;\" target=\"SIXFbz-WXIv97asvsmv4-2\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2130\" y=\"1200\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2050\" y=\"1230\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-16\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"I2C\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"30\" x=\"-2230\" y=\"1460\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-17\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"UART\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"40\" x=\"-2240\" y=\"1440\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-18\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;strokeColor=light-dark(#3399ff, #d4d4ff);strokeWidth=3;linecap=round;fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2192.5\" y=\"1449.85\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2157.5\" y=\"1450.15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-19\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;strokeColor=light-dark(#cccc02, #32b532);strokeWidth=3;linecap=round;fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2192.5\" y=\"1469.85\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2157.5\" y=\"1470.15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-20\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-38\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;strokeColor=light-dark(#1a994d, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;entryX=-0.072;entryY=0.179;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-23\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2020\" y=\"1150\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2015\" y=\"1100\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-21\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"CAN\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"30\" x=\"-2230\" y=\"1480\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-22\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;strokeColor=light-dark(#1a994d, #32b532);strokeWidth=3;linecap=round;fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2192.5\" y=\"1489.85\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2157.5\" y=\"1490.15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-23\" parent=\"1\" style=\"whiteSpace=wrap;html=1;horizontal=0;fontFamily=Inter;\" value=\"PC104 * 2\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"540\" width=\"30\" x=\"-1700\" y=\"930\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-24\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"SPI\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"30\" x=\"-2230\" y=\"1500\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-25\" edge=\"1\" parent=\"1\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;strokeColor=light-dark(#b266ff, #32b532);strokeWidth=3;linecap=round;fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-2192.5\" y=\"1509.85\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-2157.5\" y=\"1510.15\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-26\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-13\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;strokeColor=light-dark(#cccc02, #32b532);strokeWidth=2;linejoin=round;linecap=round;endArrow=none;endFill=0;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-27\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;mxPoint x=\"-1992\" y=\"1290\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1825\" y=\"1240\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-27\" parent=\"1\" style=\"shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#CCCC00;fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"-1835\" y=\"1280\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-28\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-27\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.667;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#CCCC00;linecap=round;linejoin=round;fontFamily=Inter;\" target=\"SIXFbz-WXIv97asvsmv4-23\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-29\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-35\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;strokeColor=light-dark(#3399ff, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontFamily=Inter;exitX=0.514;exitY=0.629;exitDx=0;exitDy=0;exitPerimeter=0;\" target=\"SIXFbz-WXIv97asvsmv4-23\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-1930\" y=\"1100\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1940\" y=\"1120\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-30\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"2 x UART\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"70\" x=\"-1790\" y=\"1040\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-31\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-27\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.388;exitY=1.087;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=oval;endFill=0;strokeWidth=2;strokeColor=#CCCC00;fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-1890\" y=\"1340\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1825\" y=\"1320\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-32\" parent=\"1\" style=\"text;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"I2C Test Point\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"30\" width=\"60\" x=\"-1855\" y=\"1330\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-33\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-2\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;strokeColor=light-dark(#3399ff, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;exitX=0.667;exitY=0.003;exitDx=0;exitDy=0;entryDx=0;entryDy=0;exitPerimeter=0;fontFamily=Inter;endArrow=none;endFill=0;\" target=\"SIXFbz-WXIv97asvsmv4-35\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"-2000\" y=\"1065\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"-2000\" y=\"1160\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1670\" y=\"1065\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-34\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-35\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=oval;endFill=0;strokeColor=#3399FF;fontFamily=Inter;\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;mxPoint x=\"-1930\" y=\"1040\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-35\" parent=\"1\" style=\"shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#3399FF;fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"-1940\" y=\"1055\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-36\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"Ext UART Test Point\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"120\" x=\"-1925\" y=\"1030\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-37\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-2\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;strokeColor=light-dark(#1a994d, #d4d4ff);strokeWidth=2;linecap=round;linejoin=round;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Inter;endArrow=none;endFill=0;\" target=\"SIXFbz-WXIv97asvsmv4-38\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"&gt;\n              &lt;mxPoint x=\"-2037\" y=\"1027\"/&gt;\n            &lt;/Array&gt;\n            &lt;mxPoint x=\"-2037\" y=\"1160\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1672\" y=\"1027\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-38\" parent=\"1\" style=\"shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=light-dark(#1a994d, #ededed);fontFamily=Inter;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"-1940\" y=\"1017\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-39\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-38\" style=\"edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.418;exitY=0.309;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=oval;endFill=0;strokeWidth=2;strokeColor=light-dark(#1a994d, #ededed);fontFamily=Inter;\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" width=\"100\" as=\"geometry\"&gt;\n            &lt;Array as=\"points\"/&gt;\n            &lt;mxPoint x=\"-1970\" y=\"1010\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"-1930\" y=\"1000\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-40\" parent=\"1\" style=\"text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;fontFamily=Inter;\" value=\"CAN Test Point\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"105\" x=\"-1925\" y=\"990\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-41\" parent=\"1\" style=\"rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Inter;\" value=\"GPS\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"80\" width=\"90\" x=\"-1610\" y=\"1030\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"SIXFbz-WXIv97asvsmv4-42\" edge=\"1\" parent=\"1\" source=\"SIXFbz-WXIv97asvsmv4-41\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.259;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;curved=0;linecap=round;linejoin=round;fontFamily=Inter;strokeWidth=2;strokeColor=light-dark(#3399ff, #ededed);\" target=\"SIXFbz-WXIv97asvsmv4-23\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n  &lt;/mxfile&gt;"}' style="max-width:100%;border:1px solid transparent;"></div>
 <caption>Flatsat Architecture</caption>
 </figure>
-
 <h3 id="key-subsystems">Key Subsystems</h3>
 <h4 id="1-on-board-computer-obc">1. <a href="subsystems/obc/">On-Board Computer (OBC)</a></h4>
 <p>The <strong>OBC</strong> serves as the primary "brain" for the entire satellite. In addition to managing mission logic and data handling, it also acts as the controller for the EPS hardware.</p>
@@ -792,8 +470,9 @@
 </ul>
 <h4 id="2-electrical-power-system-eps">2. <a href="subsystems/eps/">Electrical Power System (EPS)</a></h4>
 <figure>
-<img src="assets/diagram/eps_simplified.svg"/>
-<caption>EPS Power diagram</caption>
+<!-- <img src="assets/diagram/eps_simplified.svg"/> -->
+<div class="mxgraph" data-mxgraph='{"toolbar-position": "bottom", "toolbar-nohide": "0", "tooltips": "1", "border": 5, "resize": "1", "edit": "_blank", "lightbox": "1", "toolbar": "pages tags zoom layers lightbox", "xml": "&lt;mxfile host=\"Electron\" agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36\" pages=\"9\"&gt;&lt;diagram id=\"UficCAgDYK3RZno708WV\" name=\"EPS-Simplified\"&gt;\n    &lt;mxGraphModel dx=\"1204\" dy=\"-1684\" grid=\"1\" gridSize=\"10\" guides=\"1\" tooltips=\"1\" connect=\"1\" arrows=\"1\" fold=\"1\" page=\"1\" pageScale=\"1\" pageWidth=\"1169\" pageHeight=\"827\" math=\"0\" shadow=\"0\"&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\"0\"/&gt;\n        &lt;mxCell id=\"1\" parent=\"0\"/&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-1\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-2\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;linecap=round;linejoin=round;\" target=\"E7HNZciebOmolHBlwJbY-4\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-2\" parent=\"1\" style=\"whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;\" value=\"Solar\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"60\" x=\"320\" y=\"2800\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-3\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-4\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-10\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-4\" parent=\"1\" style=\"whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;\" value=\"Solar Charger\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"95\" x=\"434\" y=\"2800\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-5\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-6\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-10\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-6\" parent=\"1\" style=\"whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;\" value=\"USB Charger\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"95\" x=\"434\" y=\"2670\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-7\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-8\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;linecap=round;linejoin=round;\" target=\"E7HNZciebOmolHBlwJbY-6\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-8\" parent=\"1\" style=\"whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;\" value=\"USB C\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"60\" x=\"320\" y=\"2670\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-9\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-14\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-11\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-10\" parent=\"1\" style=\"whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;\" value=\"Charger Mux\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"95\" x=\"434\" y=\"2737.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-11\" parent=\"1\" style=\"whiteSpace=wrap;html=1;\" value=\"Battery\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"70\" x=\"565\" y=\"2800\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-12\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-10\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-14\" value=\"\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;\n            &lt;mxPoint x=\"670\" y=\"2757\" as=\"sourcePoint\"/&gt;\n            &lt;mxPoint x=\"725\" y=\"2810\" as=\"targetPoint\"/&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-13\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-14\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-16\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-14\" parent=\"1\" style=\"shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;\" value=\"\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"20\" width=\"20\" x=\"590\" y=\"2747.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-15\" edge=\"1\" parent=\"1\" source=\"E7HNZciebOmolHBlwJbY-16\" style=\"edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;linejoin=round;linecap=round;\" target=\"E7HNZciebOmolHBlwJbY-17\"&gt;\n          &lt;mxGeometry relative=\"1\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-16\" parent=\"1\" style=\"whiteSpace=wrap;html=1;\" value=\"Output Control\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"70\" x=\"645\" y=\"2737.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\"E7HNZciebOmolHBlwJbY-17\" parent=\"1\" style=\"whiteSpace=wrap;html=1;\" value=\"Subsystems\" vertex=\"1\"&gt;\n          &lt;mxGeometry height=\"40\" width=\"86\" x=\"749\" y=\"2737.5\" as=\"geometry\"/&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n  &lt;/mxfile&gt;"}' style="max-width:100%;border:1px solid transparent;"></div>
+<!-- <caption>EPS Power diagram</caption> -->
 </figure>
 <p>The <strong>EPS</strong> is the hardware layer responsible for harvesting, storing, and distributing power. <strong>Unlike other modules, the EPS does not have its own microcontroller;</strong> instead, all of its monitoring sensors and power switches are connected directly to the OBC's I2C bus.</p>
 <ul>
@@ -832,7 +511,7 @@
 <li><strong>Power Distribution:</strong> Includes <strong>two controllable power channels</strong>, allowing users to manage the energy consumption of their custom hardware effectively,.</li>
 <li><strong>High-Speed Data Links:</strong> Provides direct <strong>UART</strong> and <strong>CAN Bus</strong> connections to the On-Board Computer (OBC) for robust command and data handling,.</li>
 </ul>
-<hr />
+<hr/>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <p>Through this documentation and the associated hardware, you will learn:</p>
 <ul>
@@ -842,60 +521,30 @@
 <li><strong>Power Management:</strong> Directly monitoring energy consumption and managing battery cycles through I2C sensor integration.</li>
 <li><strong>RF Communications:</strong> Understanding 433MHz radio links and packet protocols like KISS.</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script></body>
 </html>
