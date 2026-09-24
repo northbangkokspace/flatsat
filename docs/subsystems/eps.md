@@ -75,49 +75,12 @@ The subsystem is densely populated with sensors to provide real-time health data
 
 === "Power Path"
 
-    ```mermaid
-    flowchart LR
-        subgraph Inputs ["Energy Harvesting"]
-            S1["Solar Ch 1<br/>(INA226 0x40)"]
-            S2["Solar Ch 2<br/>(INA226 0x41)"]
-            S3["Solar Ch 3<br/>(INA226 0x42)"]
-            S4["Solar Ch 4<br/>(INA226 0x43)"]
-            USB["USB-C Input"]
-        end
+    <figure>
+    <!-- <img src="assets/diagram/eps_simplified.svg"/> -->
+    <img alt="EPS-Power-Path" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
 
-        subgraph BMS ["Battery Management System"]
-            ChargeSense["Charge Monitor<br/>(INA226 0x47)"]
-            Bat(("Li-ion 18650 Battery<br/>Temperature Sensor<br/><b>(TMP102 0x4A, 0x4B)</b>"))
-            DischargeSense["Discharge Monitor<br/>(INA226 0x48)"]
-        end
-
-        subgraph PDU ["Power Distribution (ADM1177)"]
-            SW1["OBC Power (0x58)"]
-            SW2["Comm Power (0x59)"]
-            SW3["Payload 1 Power (0x5A)"]
-            SW4["Payload 2 Power (0x5B)"]
-        end
-
-        %% Power Flow
-        S1 --> ChargeSense
-        S2 --> ChargeSense
-        S3 --> ChargeSense
-        S4 --> ChargeSense
-        USB --> ChargeSense
-        
-        ChargeSense --> Bat
-        Bat --> DischargeSense
-        
-        DischargeSense --> SW1
-        DischargeSense --> SW2
-        DischargeSense --> SW3
-        DischargeSense --> SW4
-        
-        SW1 ==> OutOBC["OBC<br/>(Always On)"]
-        SW2 ==> OutComm["Communication<br/>(PD1)"]
-        SW3 ==> OutPL1["Payload 1<br/>(PD2)"]
-        SW4 ==> OutPL2["Payload 2<br/>(PD3)"]
-    ```
+    <!-- <caption>EPS Power diagram</caption> -->
+    </figure>
 
 === "I2C Path"
 

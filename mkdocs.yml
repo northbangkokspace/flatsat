@@ -1,4 +1,6 @@
 site_name: Flatsat Documentation
+hooks:
+  - hooks.py
 extra_css:
   - stylesheets/extra.css
 theme:
@@ -29,6 +31,10 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+plugins:
+  - search
+  - d2
+  - drawio
 nav:
   - Home: index.md
   - Subsystems:

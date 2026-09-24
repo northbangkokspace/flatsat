@@ -4,6 +4,13 @@
 
 The **Camera Payload** represents the primary "mission" of the FlatSat satellite. It consists of a high-resolution imaging system designed to capture visual data of the "Earth" (or its surroundings) and transmit that data to the On-Board Computer (OBC) for processing and storage.
 
+### Block Diagram
+
+<figure>
+<img alt="Payload" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<caption>Payload Block Diagram</caption>
+</figure>
+
 ### Technical Specifications
 
 The payload is built to provide high-quality imagery while maintaining a low power profile suitable for small satellite operations:

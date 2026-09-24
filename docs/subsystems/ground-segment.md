@@ -27,6 +27,7 @@ The Ground Station is built on a high-performance architecture designed for reli
 
 <figure>
 <img src="../../assets/diagram/gs_block_diagram.svg"/>
+<img alt="GS" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
 <caption>Ground Station Block diagram</caption>
 </figure>
 

@@ -3,7 +3,7 @@
 This guide details how to perform physical measurements, monitor signals, and read power metrics on the FlatSat board.
 
 <figure>
-  <img src="./assets/flatsat_board.jpg" alt="FlatSat Board View" style="border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+  <img src="../../assets/flatsat_board.jpg" alt="FlatSat Board View" style="border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
   <figcaption>FlatSat Board View</figcaption>
 </figure>
 
