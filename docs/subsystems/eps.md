@@ -15,7 +15,7 @@ A unique architectural feature of this kit is that the EPS is **centrally manage
       <!-- Mid-Right: Power Distribution Unit (PDU) -->
       <rect x="3990" y="2500" width="2150" height="1550" fill="white" rx="50" />
       <!-- Bottom-Center: USB Power -->
-      <rect x="360" y="4450" width="800" height="600" fill="white" rx="50" />
+      <rect x="420" y="4450" width="800" height="600" fill="white" rx="50" />
     </mask>
   </defs>
   <image href="../../assets/flatsat_board.jpg" width="6300" height="5400" mask="url(#eps-mask)" />
@@ -23,7 +23,7 @@ A unique architectural feature of this kit is that the EPS is **centrally manage
   <!-- Highlight Outlines -->
   <rect x="100" y="100" width="4050" height="2350" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
   <rect x="3990" y="2500" width="2150" height="1550" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
-  <rect x="360" y="4450" width="800" height="600" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
+  <rect x="420" y="4450" width="800" height="600" fill="none" stroke="#00e5ff" stroke-width="30" rx="50" />
 
   <text x="150" y="350" fill="#00e5ff" font-size="250" font-family="sans-serif" font-weight="bold" style="text-shadow: 2px 2px 10px #000, -2px -2px 10px #000, 0 0 20px #000;">EPS Location</text>
 </svg>
