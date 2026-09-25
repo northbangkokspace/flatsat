@@ -1015,7 +1015,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FKM57_WNpoZTCdWIAn4B" name="Communication">
-    <mxGraphModel dx="1267" dy="815" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="349" dy="231" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1068,16 +1068,16 @@
           <mxGeometry height="9" width="72" x="127" y="128" as="geometry" />
         </mxCell>
         <mxCell id="QFrmDznI28wXIICjCEG--17" parent="QFrmDznI28wXIICjCEG--1" style="text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;" value="PB6 / CS" vertex="1">
-          <mxGeometry height="10" width="50" x="139.5" y="97" as="geometry" />
+          <mxGeometry height="10" width="60" x="129.5" y="97" as="geometry" />
         </mxCell>
         <mxCell id="QFrmDznI28wXIICjCEG--18" parent="QFrmDznI28wXIICjCEG--1" style="text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;" value="PA7 / MOSI" vertex="1">
-          <mxGeometry height="10" width="50" x="139.5" y="107" as="geometry" />
+          <mxGeometry height="10" width="60" x="129.5" y="107" as="geometry" />
         </mxCell>
         <mxCell id="QFrmDznI28wXIICjCEG--19" parent="QFrmDznI28wXIICjCEG--1" style="text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;" value="PA6 / MISO" vertex="1">
-          <mxGeometry height="10" width="50" x="139.5" y="117" as="geometry" />
+          <mxGeometry height="10" width="60" x="129.5" y="117" as="geometry" />
         </mxCell>
         <mxCell id="QFrmDznI28wXIICjCEG--20" parent="QFrmDznI28wXIICjCEG--1" style="text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1;fontColor=#FFFFFF;" value="PA5 / CLK" vertex="1">
-          <mxGeometry height="10" width="50" x="139.5" y="127" as="geometry" />
+          <mxGeometry height="10" width="60" x="129.5" y="127" as="geometry" />
         </mxCell>
         <mxCell id="QFrmDznI28wXIICjCEG--21" parent="QFrmDznI28wXIICjCEG--1" style="text;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontFamily=Roboto Mono;fontStyle=1" value="PA10" vertex="1">
           <mxGeometry height="10" width="50" x="149" y="147" as="geometry" />

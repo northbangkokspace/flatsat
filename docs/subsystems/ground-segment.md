@@ -31,11 +31,6 @@ The Ground Station is built on a high-performance architecture designed for reli
 <caption>Ground Station Block diagram</caption>
 </figure>
 
-<figure>
-<img src="../../assets/gs_front.png"/>
-<caption>Ground Station Block diagram</caption>
-</figure>
-
 ---
 
 ## Technical Specifications
