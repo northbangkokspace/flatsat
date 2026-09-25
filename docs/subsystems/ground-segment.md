@@ -26,8 +26,12 @@ The Ground Station is built on a high-performance architecture designed for reli
 *   **Clock Accuracy:** The board includes a 16MHz High-Speed External (HSE) crystal and a 32.768kHz Low-Speed External (LSE) crystal for precise timing during data processing.
 
 <figure>
-<img src="../../assets/diagram/gs_block_diagram.svg"/>
 <img alt="GS" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<caption>Ground Station Block diagram</caption>
+</figure>
+
+<figure>
+<img src="../../assets/gs_front.png"/>
 <caption>Ground Station Block diagram</caption>
 </figure>
 
