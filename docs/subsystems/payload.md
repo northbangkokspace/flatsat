@@ -6,10 +6,10 @@ The **Camera Payload** represents the primary "mission" of the FlatSat satellite
 
 ### Block Diagram
 
-<figure>
+<!-- <figure>
 <img alt="Payload" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
 <caption>Payload Block Diagram</caption>
-</figure>
+</figure> -->
 
 ### Technical Specifications
 
