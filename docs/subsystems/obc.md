@@ -30,7 +30,7 @@ The **On-Board Computer (OBC)** serves as the primary "brain" of the FlatSat sat
 </figure>
 
 <figure>
-<img alt="OBC" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<img alt="OBC" src="../assets/diagram/Flatsat_Block_Diagram.drawio#2"/>
 <caption>OBC Block Diagram</caption>
 </figure>
 

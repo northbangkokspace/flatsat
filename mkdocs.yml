@@ -34,7 +34,8 @@ markdown_extensions:
 plugins:
   - search
   - d2
-  - drawio
+  - drawio-exporter:
+      format: svg
 nav:
   - Home: index.md
   - Subsystems:

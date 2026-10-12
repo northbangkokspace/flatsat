@@ -54,7 +54,7 @@ The COM subsystem and the OBC work in tandem to process incoming commands:
 ## Block Diagram
 
 <figure>
-<img alt="Communication" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<img alt="Communication" src="../assets/diagram/Flatsat_Block_Diagram.drawio#3"/>
 <caption>Communication Block diagram</caption>
 </figure>
 

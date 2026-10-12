@@ -22,7 +22,7 @@ The kit is divided into two primary segments: the **Space Segment** (the FlatSat
 The FlatSat architecture centers around a main circuit board where various subsystems are integrated through a standardized **PC104 Bus**. A key feature of this design is its **centralized control logic**: while most subsystems have their own dedicated processors, the **Electrical Power System (EPS)** is controlled directly by the **On-Board Computer (OBC)** via a shared I2C bus.
 
 <figure>
-<img alt="Overview" src="assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<img alt="Overview" src="assets/diagram/Flatsat_Block_Diagram.drawio#1"/>
 <caption>Flatsat Architecture</caption>
 </figure>
 
@@ -41,7 +41,7 @@ The **OBC** serves as the primary "brain" for the entire satellite. In addition 
 #### 2. [Electrical Power System (EPS)](subsystems/eps.md)
 <figure>
 <!-- <img src="assets/diagram/eps_simplified.svg"/> -->
-<img alt="EPS-Simplified" src="assets/diagram/Flatsat_Block_Diagram.drawio"/>
+<img alt="EPS-Simplified" src="assets/diagram/Flatsat_Block_Diagram.drawio#7"/>
 
 <!-- <caption>EPS Power diagram</caption> -->
 </figure>

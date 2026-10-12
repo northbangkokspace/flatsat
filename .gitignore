@@ -6,3 +6,8 @@ all_codes
 file_tree.txt
 .DS_Store
 source_docs/
+.cache/
+drawio-exporter/
+docs/drawio-exporter/
+__pycache__/
+*.pyc

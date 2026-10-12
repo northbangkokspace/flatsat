@@ -77,7 +77,7 @@ The subsystem is densely populated with sensors to provide real-time health data
 
     <figure>
     <!-- <img src="assets/diagram/eps_simplified.svg"/> -->
-    <img alt="EPS-Power-Path" src="../../assets/diagram/Flatsat_Block_Diagram.drawio"/>
+    <img alt="EPS-Power-Path" src="../assets/diagram/Flatsat_Block_Diagram.drawio#6"/>
 
     <!-- <caption>EPS Power diagram</caption> -->
     </figure>
