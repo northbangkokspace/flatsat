@@ -54,8 +54,20 @@ The Ground Station is built on a high-performance architecture designed for reli
 
 The following code provides a complete setup for the Ground Station, enabling it to transmit and receive radio packets. This script is essential for establishing the first "handshake" between your ground station and the FlatSat.
 
+### Prerequisite Library
+These Arduino Library are needed to be installed to be able to use provided example code
+
+1. **RadioLib** is a versatile radio communication library that supports a wide range of wireless modules, including LoRa, FSK, and other RF transceivers. It handles packet encoding, modulation settings, and radio control, making it easy to implement long-range or low-power wireless communication.
+<figure>
+<img src="../../assets/radiolib.png"/>
+</figure>
+> Code provided works with library version 7.5.0
+>
+> Library can be installed from Arduino IDE's library manager
+
 | Feature | Description | Code Link |
 | :--- | :--- | :--- |
 | **GS TX/RX** | Initialize the Ground Station radio and perform basic transmit/receive operations. | [gs_tx_rx.ino](../codes/gs/gs_tx_rx/gs_tx_rx.ino) |
+| **Ping-Pong Test** | Unified test routine verifying RF ping-pong communication, active-low TX/RX status LEDs, and PC UART interface. | [gs_test_ping_pong.ino](../codes/gs/gs_test_ping_pong/gs_test_ping_pong.ino) |
 
 **User Note:** When deploying your Ground Station, ensure the radio settings (Frequency, SyncWord, and Bitrate) exactly match those configured on the satellite's Communication module to establish a successful link.

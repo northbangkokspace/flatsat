@@ -77,5 +77,6 @@ These Arduino Library are needed to be installed to be able to use provided exam
 | :--- | :--- | :--- |
 | **Radio TX/RX** | Basic routine to initialize the RFM98PW and send/receive radio packets. | [commu_tx_rx.ino](../codes/communication/commu_tx_rx/commu_tx_rx.ino) |
 | **OBC Link** | Demonstrates how the COM module receives and responds to messages from the OBC. | [commu_msg_from_obc.ino](../codes/communication/commu_msg_from_obc/commu_msg_from_obc.ino) |
+| **Ping-Pong Test** | Unified test routine verifying RF ping-pong communication, active-low TX/RX status LEDs, and OBC UART interface. | [commu_test_ping_pong.ino](../codes/communication/commu_test_ping_pong/commu_test_ping_pong.ino) |
 
 **Note:** For the communication link to work, ensure your Ground Station is configured to the same frequency (433 MHz) and data rate as your satellite's COM module.
