@@ -2225,7 +2225,7 @@
         <mxCell id="JysbvNPRLzkocTHJjF7p-65" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;" value="USB Charger" vertex="1">
           <mxGeometry height="48.26" width="95" x="2947.5" y="910.0000000000001" as="geometry" />
         </mxCell>
-        <mxCell id="JysbvNPRLzkocTHJjF7p-66" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;" value="Chg Mux" vertex="1">
+        <mxCell id="JysbvNPRLzkocTHJjF7p-66" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;" value="Chg Sum" vertex="1">
           <mxGeometry height="35" width="74" x="2958" y="1054.5" as="geometry" />
         </mxCell>
         <mxCell id="JysbvNPRLzkocTHJjF7p-67" edge="1" parent="1" source="JysbvNPRLzkocTHJjF7p-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.207;entryY=0.521;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;fontFamily=Inter;linecap=round;linejoin=round;align=center;strokeWidth=5;strokeColor=#FF9999;endSize=7;" target="JysbvNPRLzkocTHJjF7p-38">
@@ -2464,7 +2464,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="UficCAgDYK3RZno708WV" name="EPS-Simplified">
-    <mxGraphModel dx="1204" dy="-1684" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="852" dy="-1969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2495,7 +2495,7 @@
         <mxCell id="E7HNZciebOmolHBlwJbY-9" edge="1" parent="1" source="E7HNZciebOmolHBlwJbY-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;linejoin=round;linecap=round;" target="E7HNZciebOmolHBlwJbY-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="E7HNZciebOmolHBlwJbY-10" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;" value="Charger Mux" vertex="1">
+        <mxCell id="E7HNZciebOmolHBlwJbY-10" parent="1" style="whiteSpace=wrap;html=1;fontFamily=Inter;linecap=round;linejoin=round;align=center;" value="Charger Sum" vertex="1">
           <mxGeometry height="40" width="95" x="434" y="2737.5" as="geometry" />
         </mxCell>
         <mxCell id="E7HNZciebOmolHBlwJbY-11" parent="1" style="whiteSpace=wrap;html=1;" value="Battery" vertex="1">
